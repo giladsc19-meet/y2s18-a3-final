@@ -5,14 +5,16 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-# Place your database schema code here
 
-# Example code:
-class Student(Base):
-    __tablename__ = "students"
-    id = Column(Integer, primary_key = True)
-    name = Column(String)
-    year = Column(Integer)
+	__tablename__ = 'user'
+	user_id = Column(Integer, primary_key=True)
+	user_name = Column(String)
+	password = Column(String)
 
-    def __repr__(self):
-        return ("Student name: {}, Student year:{}".format(self.name, self.year))
+
+	def __repr__(self):
+		return ("User Name: {}\n"
+				"Password: {} \n"
+				
+					self.user_name,
+					self.password)
