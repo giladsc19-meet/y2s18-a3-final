@@ -14,8 +14,8 @@ session = DBSession()
 ###add & delete
 def add_user(self, user_name, password):
     print("Add a User!")
-    while(check_user_name_available(user_name,password)==True)
-        user_name = input()
+    #while(check_user_name_available(user_name,password)=True)
+        #user_name = input()
     user = User(user_name = user_name, password = password)
     session.add(user)
     session.commit()
