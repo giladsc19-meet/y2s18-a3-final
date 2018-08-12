@@ -9,12 +9,12 @@ app = Flask(__name__)
 def login():
     return render_template('login.html', users=get_all_users())
 @app.route('/add', methods=['GET', 'POST'])
-def add_use():
+def add_user():
 	if request.method == 'GET':
 		return render_template('login.html')
 	else:
 		
-		user_name= request.form['username']
+		user_name= request.form['user name']
 		password= request.form['password']
 		add_user(user_name,password)
 		return render_template('home.html')
