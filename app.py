@@ -22,9 +22,9 @@ def add_student_route():
 
 # this is for the home page (feed page)
 
-@app.route('/home/user_name=<String:user_name> password=<int:password>')
-def home():
-    return render_template('home.html')
+@app.route('/home/<String:user_name>/<String:password>')
+def home(user_name, password):
+    return render_template('home.html', user_name = user_name, password = password)
 
 # this is for the profile page
 
@@ -32,11 +32,12 @@ def home():
 def display_user(user_name):
     return render_template('login.html', user=query_by_user_name(user_name))
 
+# this is for the 
 
 @app.route('/delete/<String:user_name>', methods=['POST'])
 def delete(user_namr):
     delete_user(user_name)
     return redirect(url_for('login.html'))
 		
-
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
