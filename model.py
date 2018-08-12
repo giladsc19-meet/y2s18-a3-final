@@ -13,7 +13,8 @@ class User(Base):
     user_name = Column(String)
     password = Column(String)
 #   birthday = Column(String)
-    posts = Column(object)
+#   posts = Column(object)
+
 
     def __repr__(self):
-        return ("User_name: {}, Password:{}, birthday:{}".format(self.user_name, self.password, self.birthday))
+        return ("User_name: {}, Password:{}, ".format(self.user_name, self.password,))
