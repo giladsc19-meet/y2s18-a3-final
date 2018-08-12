@@ -2,6 +2,7 @@ from databases import *
 from flask import Flask, render_template, url_for,request,redirect
 app = Flask(__name__)
 
+<<<<<<< HEAD
 @app.route('/', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
@@ -11,9 +12,14 @@ def add_student_route():
 		user_name= request.form['user_name']
 		password= request.form['password']
 		status = add_user(user_name,password)
+		
 		if status:
-			return redirect(url_for('home, user_name, password'))
-		return render_template('login.html')
+			return render_template('home.html')
+		else:
+			return render_template('login.html')
+
+
+
 
 # this is for the home page (feed page)
 
@@ -29,8 +35,8 @@ def display_user(user_name):
 
 # this is for the 
 
-@app.route('/delete/<string:user_name>', methods=['POST'])
-def delete(user_namr):
+@app.route('/delete/<string:user_name>')
+def delete(user_name):
     delete_user(user_name)
     return redirect(url_for('login.html'))
 		
