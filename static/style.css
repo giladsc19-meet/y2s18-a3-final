@@ -3,5 +3,22 @@
     padding: 0;
     margin: 0;
 }
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=text] {
+    background-color:white;
+    color: white;
+}
+body {
+    background-color: blue;
+    color: white;
+}
+form:hover{color:green;
+font-size:25px;}
 
-/* Put your styles BELOW this line */
+/* Put your style
+s BELOW this line */
