@@ -1,7 +1,24 @@
 * {
     /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+    padding:16px 32px;
+    margin: 4px 2px;
+
 }
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color:white;
+    color: white;
+}
+body {
+    background-color: white;
+    color: green;
+}
+form:hover{color:green;
+font-size:25px;}
+
 
 /* Put your styles BELOW this line */
