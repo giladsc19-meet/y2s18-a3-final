@@ -10,7 +10,7 @@ Base = declarative_base()
 # Example code:
 class User(Base):
     __tablename__= users
-    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, primary_key=True)
     user_name = Column(String)
     password = Column(String)
 #   birthday = Column(String)

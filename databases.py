@@ -12,18 +12,29 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 ###add & delete
-def add_user(self, user_name, password, birthday):
+def add_user(self, user_name, password):
     print("Add a User!")
-    user = User(user_name = user_name, password = password, birthdat = birthday)
+    while(check_user_name_available(user_name,password)==True)
+        user_name = input()
+    user = User(user_name = user_name, password = password)
     session.add(user)
     session.commit()
-
+#put java script for let another option of writing
 def delete_user_by_user_name(user_name):
     session.query(User).filter_by(user_name = user_name).delete().first()
     session.commit()
 ###check user (exsist?)
+def check_user_name_available(user_name):
+    if session.query(User).filter_by(user_name=user_name).first()!=None:
+        return True
+    else:
+        return False
+
 def check_user(user_name,password):
-    session.query(User).filter_by(user_name=user_name,password=password).first()
+    if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
+        return True
+    else:
+        return False
 ###reaching users
 def get_all_users():
     users = session.query(User).all()
