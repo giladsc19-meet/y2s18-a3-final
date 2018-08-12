@@ -23,7 +23,7 @@ def add_student_route():
 
 @app.route('/home/<string:user_name>/<string:password>')
 def home(user_name, password):
-    return render_template('home.html', user_name = user name, password = password)
+    return render_template('home.html', user_name = user_name, password = password)
 
 # this is for the profile page
 
