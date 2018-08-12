@@ -14,7 +14,7 @@ input[type=text] {
     color: white;
 }
 body {
-    background-color: white;
+    background-color: green;
     color: green;
 }
 form:hover{color:green;
