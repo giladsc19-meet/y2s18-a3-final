@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def login():
-    return render_template('login.html', students=query_all())
+    return render_template('login.html', users=query_all())
 @app.route('/add', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
@@ -18,12 +18,12 @@ def add_student_route():
 		return render_template('add.html')
 
 	
-@app.route('/user/<int:user_id>')
-def display_user(user_id):
-    return render_template('login.html', user=query_by_id(user_id))
-@app.route('/delete/<int:user_id>', methods=['POST'])
-def delete(user_id):
-    delete_user(user_id)
+@app.route('/user/<int:user_name>')
+def display_user(user_name):
+    return render_template('login.html', user=query_by_user_name(user_name))
+@app.route('/delete/<int:user_name>', methods=['POST'])
+def delete(user_namr):
+    delete_user(user_name)
     return redirect(url_for('login.html'))
 		
 
