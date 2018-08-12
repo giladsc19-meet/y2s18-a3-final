@@ -3,6 +3,7 @@ from flask import Flask, render_template, url_for,request,redirect
 app = Flask(__name__)
 
 @app.route('/')
+<<<<<<< HEAD
 def login():
     return render_template('login.html', users=query_all())
 @app.route('/add', methods=['GET', 'POST'])
@@ -28,3 +29,16 @@ def delete(user_namr):
 		
 
 app.run(debug=True)
+=======
+def signUp():
+    return render_template('login.html')
+
+@app.route('/home/user_name=<String:user_name> password=<int:password>')
+def home():
+    return render_template('home.html')
+
+
+# Running the Flask app
+if __name__ == "__main__":
+    app.run(debug=True)
+>>>>>>> 576060a3af181bdd55038c5278386fc0efcdc97f
