@@ -9,8 +9,13 @@ app = Flask(__name__)
 
 # App routing code here
 @app.route('/')
+def signUp():
+    return render_template('login.html')
+
+@app.route('/home/user_name=<String:user_name> password=<int:password>')
 def home():
     return render_template('home.html')
+
 
 # Running the Flask app
 if __name__ == "__main__":
