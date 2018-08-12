@@ -11,14 +11,13 @@ def login():
 @app.route('/add', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
-		return render_template('add.html')
+		return render_template('login.html')
 	else:
 		
 		user_name= request.form['username']
 		password= request.form['password']
 		add_user(user_name,password)
-
-		return render_template('add.html')
+		return render_template('home.html')
 
 # this is for the home page (feed page)
 
@@ -34,8 +33,8 @@ def display_user(user_name):
 
 # this is for the 
 
-@app.route('/delete/<string:user_name>', methods=['POST'])
-def delete(user_namr):
+@app.route('/delete/<string:user_name>')
+def delete(user_name):
     delete_user(user_name)
     return redirect(url_for('login.html'))
 		
