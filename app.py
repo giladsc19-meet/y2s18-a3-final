@@ -26,12 +26,14 @@ def add_student_route():
 def home():
     return render_template('home.html')
 
+# this is for the profile page
 
-
-@app.route('/user/<int:user_name>')
+@app.route('/user/<String:user_name>')
 def display_user(user_name):
     return render_template('login.html', user=query_by_user_name(user_name))
-@app.route('/delete/<int:user_name>', methods=['POST'])
+
+
+@app.route('/delete/<String:user_name>', methods=['POST'])
 def delete(user_namr):
     delete_user(user_name)
     return redirect(url_for('login.html'))
