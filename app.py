@@ -7,16 +7,16 @@ app = Flask(__name__)
 
 # this is for the login page
 def login():
-    return render_template('login.html', users=query_all())
+    return render_template('login.html', users=get_all_users())
 @app.route('/add', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
 		return render_template('add.html')
 	else:
 		
-		name= request.form['username']
-		year= request.form['password']
-		add_users(user_name,password)
+		user_name= request.form['username']
+		password= request.form['password']
+		add_user(user_name,password)
 
 		return render_template('add.html')
 
@@ -30,7 +30,7 @@ def home(user_name, password):
 
 @app.route('/user/<string:user_name>')
 def display_user(user_name):
-    return render_template('login.html', user=query_by_user_name(user_name))
+    return render_template('login.html', user=get_by_user_name(user_name))
 
 # this is for the 
 

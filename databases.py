@@ -5,14 +5,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # You can change the name of your database, just change project.db to whatever you want (make sure to include .db at the end!)
-# Make sure you have the same name for the database in the app.py file!
+# Make sure you have the same name   for the database in the app.py file!
 engine = create_engine('sqlite:///project.db')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 ###add & delete
-def add_user(self, user_name, password):
+def add_user(user_name, password):
     print("Add a User!")
     #while(check_user_name_available(user_name,password)=True)
         #user_name = input()
