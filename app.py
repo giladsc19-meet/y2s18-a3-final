@@ -6,12 +6,15 @@ app = Flask(__name__)
 
 
 # this is for the login page
-def login():
-    return render_template('login.html', users=get_all_users())
+
 @app.route('/add', methods=['GET', 'POST'])
+<<<<<<< HEAD
 def add_user():
+=======
+def login():
+>>>>>>> 1a5c718d4f0bddc69b03fd9511a74f6062d74960
 	if request.method == 'GET':
-		return render_template('login.html')
+		return render_template('login.html', users=get_all_users())
 	else:
 		
 		user_name= request.form['user name']
