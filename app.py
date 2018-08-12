@@ -9,7 +9,7 @@ app = Flask(__name__)
 def login():
     return render_template('login.html', users=get_all_users())
 @app.route('/add', methods=['GET', 'POST'])
-def add_student_route():
+def add_use():
 	if request.method == 'GET':
 		return render_template('login.html')
 	else:
