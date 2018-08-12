@@ -2,23 +2,18 @@ from databases import *
 from flask import Flask, render_template, url_for,request,redirect
 app = Flask(__name__)
 
-@app.route('/')
-
-
-# this is for the login page
-def login():
-    return render_template('login.html', users=get_all_users())
-@app.route('/add', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
-		return render_template('add.html')
+		return render_template('login.html')
 	else:
 		
-		user_name= request.form['username']
+		user_name= request.form['user_name']
 		password= request.form['password']
-		add_user(user_name,password)
-
-		return render_template('add.html')
+		status = add_user(user_name,password)
+		if status:
+			return redirect(url_for('home, user_name, password'))
+		return render_template('login.html')
 
 # this is for the home page (feed page)
 

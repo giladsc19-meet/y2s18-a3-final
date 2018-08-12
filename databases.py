@@ -14,11 +14,14 @@ session = DBSession()
 ###add & delete
 def add_user(user_name, password):
     print("Add a User!")
-    #while(check_user_name_available(user_name,password)=True)
-        #user_name = input()
-    user = User(user_name = user_name, password = password)
-    session.add(user)
-    session.commit()
+    if check_user_name_available(user_name)==True:
+        print ("cant use")
+        return False
+    else:
+        user = User(user_name = user_name, password = password)
+        session.add(user)
+        session.commit()
+        return True
 #put java script for let another option of writing
 def delete_user_by_user_name(user_name):
     session.query(User).filter_by(user_name = user_name).delete().first()
