@@ -40,6 +40,6 @@ def get_all_users():
     users = session.query(User).all()
     return users
 
-def get_user_by_user_name(user_name):
+def get_by_user_name(user_name):
     user = session.query(User).filter_by(user_name=user_name).first()
     return user
