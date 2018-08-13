@@ -1,24 +1,40 @@
-* {
-    /* Removes extra spacing from all elements on the page */
-    padding: 0;
-    margin: 0;
+a:hover{ font-size:20px; color:white;}
+#background{background-color: aqua}
+.column{
+	float: :left;
+	width: 33.33%;
 }
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    color:aqua;
 }
-input[type=text] {
-    background-color:white;
+.topnav a {
+    float: left;
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-body {
-    background-color: blue;
-    color: white;
-}
-form:hover{color:green;
-font-size:25px;}
 
-/* Put your style
-s BELOW this line */
+.container {
+	position: relative;
+}
+
+.sidebar {
+	position: absolute;
+	top: 15px;
+	left: 150px;
+	color:white;
+	background-color: white;
+}
+.content {
+	position: absolute;
+	top: 15px;
+	left: 150px;
+}
+.post_list{
+	position: relative;
+}
+

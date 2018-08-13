@@ -47,5 +47,11 @@ def display_user(user_name):
     return render_template('login.html', user=get_by_user_name(user_name))
 
 
+@app.route('/yyy')
+def dis():
+	return render_template('home.html')
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
