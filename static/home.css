@@ -1,13 +1,13 @@
 a:hover{ font-size:20px; color:white;}
-#background{background-color: aqua}
+#background{background-color: gray}
 .column{
 	float: left;
 	width: 33.33%;
 }
 .topnav {
     overflow: hidden;
-    background-color: white;
-    color:aqua;
+    background-color: gray;
+    color:white;
 }
 .topnav a {
     float: left;
@@ -17,20 +17,35 @@ a:hover{ font-size:20px; color:white;}
     padding: 14px 16px;
     text-decoration: none;
 }
+<<<<<<< HEAD
 .container {
 	position: relative;
 }
+=======
+input {
+	top: 100px;
+	left: 500px;
+}
+.container {
+	position: relative;
+}
+.column{
+	top: 15px;
+	left: 600px;
+}
+>>>>>>> 0bb46555977ee7c2da6ddb720073c46eaff03da4
 .sidebar {
 	position: absolute;
 	top: 15px;
-	left: 150px;
-	color:white;
+	left: 500px;
+	color:aqua;
+	font-size: 25px;
 	background-color: white;
 }
 .content {
 	position: absolute;
 	top: 15px;
-	left: 150px;
+	left: 500px;
 }
 .post_list{
 	position: relative;
