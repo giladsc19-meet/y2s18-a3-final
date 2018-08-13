@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>CSS Example</title>
-
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
 </head>
 
@@ -14,26 +12,25 @@
 		<div class="content">
 
 			<form action="/home" method="post">
-			
-        
-            <section id = "post_info">
-
-			<h1>information about us:</h1>
-			<li class="topnav" id="background">
-			<a href="{{dis}}">contact us</a>
-			<a href="{{dis}}">who we are</a>
-			<a href="{{dis}}">help</a>
-			</li>
-			<div class="column" >posts:</div>
-			<input type="text" name="image_url" placeholder="post your image">
-            <input type="text" name="text" placeholder="write your post">
+				<section id="post_info">
+					<h1>information about us:</h1>
+					<li class="topnav" id="background">
+						<a href="{{dis}}">contact us</a>
+						<a href="{{dis}}">who we are</a>
+						<a href="{{dis}}">help</a>
+					</li>
+					<div class="column">posts:</div>
+					<input type="text" name="image_url" placeholder="post your image">
+					<input type="text" placeholder="write your post" name="content">
+					<input type="submit" name="submit" value="submit">
 			</form>
 
 		</div>
 	</div>
 	{% for post in feed %}
+		
 	<div class="post_list">
-		<img src="{{post.path}}" alt="{{post.name}}" height="42" width="42">
+		<img src="{{post.image_url}}" alt="{{post.name}}" height="42" width="42">
 	</div>
 
 	{% endfor %}
