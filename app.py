@@ -42,6 +42,10 @@ def add_student_route():
 
 # this is for the profile page
 
+@app.route('/profile')
+def display_profile():
+    return render_template('profile.html')
+
 @app.route('/user/<string:user_name>')
 def display_user(user_name):
     return render_template('login.html', user=get_by_user_name(user_name))

@@ -2,19 +2,38 @@
 <html>
     <head>
         <title>YOUR_TITLE_HERE</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
     </head>
 
     <body>
-        <section id = "sidebar">
-
-        </section>
-
-        {{{ for i in range(len(posts)): }}}
-            <section id = "post_info">
-
-            </section>
         
+        <div id = "sidebar"></div>
+
+        <div class="container-fluid">
+            
+                <div class="row space">
+                    <div style="text-align: center;"  class="col-md-4">
+                        <div class="card">
+                            <img src="https://image.shutterstock.com/image-vector/photo-profile-placeholder-260nw-1040700073.jpg" alt="John" style="width:100%">
+                            <h1>John Doe</h1>
+                            <p class="badge">Environment Saviour</p>
+                            <p>CEO & Founder</p>
+                            <div style="margin: 50px 0;"></div>
+                            <p><button type="button" class="btn btn-outline-primary">Primary</button></p>
+                        </div>
+                    </div>
+                    <div class="col-md-8 posts">
+                        <div class="content">
+                                
+                        </div>
+                    </div>
+                </div>
+        </div>
 
         <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
     </body>
