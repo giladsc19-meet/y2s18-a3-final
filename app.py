@@ -53,15 +53,11 @@ def home():
 def display_user(user_name):
     return render_template('login.html', user=get_by_user_name(user_name))
 
-<<<<<<< HEAD
+
 
 @app.route('/yyy')
 def dis():
 	return render_template('home.html')
 
-
-
-=======
->>>>>>> dc8a6b047b5cf8739399b5b5511766f2985d9e2a
 if __name__ == "__main__":
     app.run(debug=True)
