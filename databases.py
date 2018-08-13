@@ -7,6 +7,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 ###add & delete
+# 1) add a user to the database ! (PES: gets called in the SIGN UP)
 def add_user(user_name, password):
     print("Add a User!")
     if check_user_name_available(user_name)==True:
@@ -28,41 +29,17 @@ def check_user_name_available(user_name):
     else:
         return False
 
-
-# 1) add a user to the database ! (PES: gets called in the SIGN UP)
-
-
-def add_user(user_name, password):
-
-    if check_user_name_available(user_name):
-        return False
-        #put java script for let another option of writing
-
-    else:
-        new_user = User(user_name = user_name, password = password)
-        session.add(new_user)
-        session.commit()
-        return True
-
-
 # 2) check if a user exists in the database ! (PES: gets called in the LOG IN)
-
 
 def check_user(user_name, password):
     if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
         return True
     else:
-<<<<<<< HEAD
         return False        
 ###reaching users
-=======
-        return False
-
 
 # 3) get all the users from the database ! (PES: gets passed to login.html to check if the user exists in the database when logging in)
 
-
->>>>>>> 7fd56fee9f8cd56ef0fa1285e60730a84f112105
 def get_all_users():
     users = session.query(User).all()
     return users

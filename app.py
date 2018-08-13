@@ -7,11 +7,19 @@ def login():
 
 	if request.method == 'GET':
 		return render_template('login.html')
+	else:
+		user_name = request.form['user_name']
+		password= request.form['password']
+		if check_user(user_name, password)==True:
+			return render_template('home.html')
+		else:
+			x = "wrong password or user_name"
+			return render_template('login.html', message=x)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
-		return render_template('login.html')
+		return render_template('sign_up.html')
 	else:
 		
 		user_name= request.form['user_name']
@@ -21,19 +29,7 @@ def add_student_route():
 		if status:
 			return render_template('home.html')
 		else:
-			return render_template('login.html')
-
-
-
-	if request.method == 'POST':
-		user_name= request.form['user_name']
-		password= request.form['password']
-		status = add_user(user_name,password)
-		
-		if status:
-			return render_template('home.html', user = new_user)
-		else:
-			return render_template('login.html')
+			return render_template('signup.html')
 
 
 # this is for the profile page
