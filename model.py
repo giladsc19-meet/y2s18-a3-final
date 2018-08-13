@@ -5,16 +5,28 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+########################################################################################## Dont care about the above !
 
-# Example code:
+
+
+# this is the user object model
+
 class User(Base):
     __tablename__= "users"
-    user_id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     user_name = Column(String)
     password = Column(String)
-#   birthday = Column(String)
-#   posts = Column(object)
+    bio = Column(String)
+    image_url = Column(String)
+    # posts = Column(list)
+    # badges = Column(list)
 
+# this is the post object model
 
-    def __repr__(self):
-        return ("User_name: {}, Password:{}, ".format(self.user_name, self.password,))
+class Post(Base):
+    __tablename__= "posts"
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer)
+    text = Column(String)
+    image_url = Column(String)
+    badge = Column(String)
