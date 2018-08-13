@@ -18,15 +18,15 @@ class User(Base):
     password = Column(String)
     bio = Column(String)
     image_url = Column(String)
-    posts = Column(list)
-    badges = Column(list)
+    # posts = Column(list)
+    # badges = Column(list)
 
 # this is the post object model
 
 class Post(Base):
     __tablename__= "posts"
     id = Column(Integer, primary_key=True)
-    user = Column(object)
+    user_id = Column(Integer)
     text = Column(String)
     image_url = Column(String)
     badge = Column(String)

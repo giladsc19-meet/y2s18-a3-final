@@ -62,12 +62,13 @@ def get_by_user_name(user_name):
 
 
 def get_posts():
-
+    pass
 
 # 6) edit the image of the user
 
 
 def edit_image(user_name):
+    pass
 	
 
 
