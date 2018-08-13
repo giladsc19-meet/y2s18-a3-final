@@ -7,7 +7,6 @@ app.secret_key = os.urandom(12)
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-
 	if request.method == 'GET':
 		return render_template('login.html')
 	else:
@@ -39,7 +38,9 @@ def add_student_route():
 @app.route('/home', methods=['GET', 'POST'])
 def home():
 	if request.method == 'GET':
+		print("home 1")
 		feed = get_posts()
+		print("home is where you are")
 		return render_template('home.html', feed=feed)
 	else:
 		text = request.form['text']
@@ -52,6 +53,14 @@ def home():
 @app.route('/user/<string:user_name>')
 def display_user(user_name):
     return render_template('login.html', user=get_by_user_name(user_name))
+
+
+
+
+@app.route('/yyy')
+def dis():
+	return render_template('home.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

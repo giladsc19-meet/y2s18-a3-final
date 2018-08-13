@@ -64,11 +64,9 @@ def make_post(user_id,text, image_url):
 get_by_user_name
 def get_posts():
     posts = session.query(Post).all()
+    print("get posts")
     return posts
 
-    
-def _json_object_hook(d): return namedtuple('X', d.keys())(*d.values())
-def json2obj(data): return json.loads(data, object_hook=_json_object_hook)
 # 6) edit the image of the user
 
 
