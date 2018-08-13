@@ -5,10 +5,6 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-########################################################################################## Dont care about the above !
-
-
-
 # this is the user object model
 
 class User(Base):
@@ -29,4 +25,4 @@ class Post(Base):
     user_id = Column(Integer)
     text = Column(String)
     image_url = Column(String)
-    badge = Column(String)
+    # badge = Column(String)
