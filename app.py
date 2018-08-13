@@ -9,16 +9,11 @@ app.secret_key = os.urandom(12)
 def login():
 	if request.method == 'GET':
 		return render_template('login.html')
-		print("1")
 	else:
 		user_name = request.form['user_name']
-		print("2")
 		password= request.form['password']
-		print("3")
 		if check_user(user_name, password)==True:
-			print("4")
 			user = get_by_user_name(user_name)
-			print("5")
 			print(user)
 			session['user_id'] = user.id
 			print(session['user_id'])
@@ -66,11 +61,6 @@ def display_user(user_name):
     return render_template('login.html', user=get_by_user_name(user_name))
 
 
-
-
-@app.route('/yyy')
-def dis():
-	return render_template('home.html')
 
 
 if __name__ == "__main__":

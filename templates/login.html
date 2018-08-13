@@ -1,63 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Final Project</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
-    </head>
+<head>
+    <title>My Final Project</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
 
-    <body>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 
-        <div id="sidebar">
-            <h1></h1>
-            <a href="login.html"></a>
-            <button onclick="window.location.href="login.html">login</button>
-            <button onclick="window.location.href="sign_up">sign_up</button>
-
-
-         <div>
-               
-
-        
-
-            <!-- <nav class="navbar navbar-light bg-light">
-              <a class="navbar-brand">Navbar</a>
-              <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-         </a> -->
-
-
-        <h1>welcome to our website!!!</h1>
+</head>
+<body>
+    <div style="background-color: aqua" id="header">
+       <a href="login.html">
+           <button onclick="window.location" href="login.html" class="btn btn-outline-danger">login</button>
+           <button onclick="window.location" href="sign_up" class="btn btn-outline-danger">sign_up</button>
+       </a>
     </div>
 
 
-    
 
      <form method = "post" action="/">
             <input type="text" name="user_name" placeholder="user_name">
             <input type="password" name="password" placeholder="password">
-            <input type="submit" value="submit">
+            <input type="submit" value="submit" class="btn btn-outline-danger">
         </form>
-        <div style="background-color: aqua" id="header">
+        <div class="main">
+          
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
-        </div> 
-        <div class="container" id="content">
-  <h1></h1>
-  <p></p>
-</div>
-
-
-
-
-
-        
-    
-    </body>
-
-
+</body>
 </html>
 
