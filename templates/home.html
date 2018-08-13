@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>CSS Example</title>
 
- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
 </head>
+
 <body>
 
 	<div class=”container”>
 		<div class=”sidebar”> logo:</div>
 		<div class=”content”>
 
+			<section id="post_info">
+				<h1>information about us:.</h1>
+				<li class="topnav" id="background">
+					<a href="{{dis}}">contact us</a>
+					<a href="{{dis}}">who we are</a>
+					<a href="{{dis}}">help</a>
+				</li>
+				<li class="column" id="backound">posts:</li>
 
-        
-            <section id = "post_info">
-
-			<h1>information about us:.</h1>
-			<li class="topnav" id="background">
-			<a href="{{dis}}">contact us</a>
-			<a href="{{dis}}">who we are</a>
-			<a href="{{dis}}">help</a>
-			</li>
-			<li class="column" id="backound">posts:</li>
-			
 
 		</div>
 	</div>
-{% for post in feed %}
-<div class ="post_list"><img src="{{post.path}}" alt="{{post.name}}" height="42" width="42">
-</div>
+	{% for post in feed %}
+	<div class="post_list">
+		<img src="{{post.path}}" alt="{{post.name}}" height="42" width="42">
+	</div>
 
-{% endfor %}
+	{% endfor %}
 </body>
 
 </html>
