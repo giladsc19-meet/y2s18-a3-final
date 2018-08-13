@@ -10,15 +10,39 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    background-color:white;
+    background-color:aqua;
     color: white;
 }
 body {
-    background-color: white;
-    color: white;
+   
+    background-color: #6bf8fc;
+    height: 100%;
+    width:100%;
 }
-form:hover{color:green;
-font-size:25px;}
 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#sidenav {
+    height: 100%; 
+    width: 160px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+.container{
+	background-color:white;
+	height: 100%;
+	position:absolute;
+}
 
 /* Put your styles BELOW this line */

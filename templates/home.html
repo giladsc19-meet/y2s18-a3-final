@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>YOUR_TITLE_HERE</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
-    </head>
 
-    <body>
-        <section id = "sidebar">
+<head>
+	<title>CSS Example</title>
 
-        </section>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+</head>
 
-        {{{ for i in range(len(posts)): }}}
+<body>
+
+	<div class="container">
+		<div class="sidebar"> logo:</div>
+		<div class="content">
+			<center>
+
+			<form action="/home" method="post">
+			
+        
             <section id = "post_info">
 
-            </section>
-        
+			<h1>information about us:</h1>
+			<center>
+				<li class="topnav" id="background">
+				<a href="{{dis}}">contact us</a>
+				<a href="{{dis}}">who we are</a>
+				<a href="{{dis}}">help</a>
+				</li>
+			</center>
+			<div class="column" >posts:</div><br>
+			<input type="text" name="image_url" placeholder="post your image">
+            <input type="text" name="text" placeholder="write your post">
+			<input type="submit" value="submit">
+			</form>
+		</center>
 
-        <script src="{{ url_for('static', filename='js/home.js') }}"></script>
-    </body>
+		</div>
+	</div>
+	{% for post in feed %}
+	<div class="post_list">
+		<img src="{{post.path}}" alt="{{post.name}}" height="42" width="42">
+	</div>
+
+	{% endfor %}
+</body>
+
 </html>
