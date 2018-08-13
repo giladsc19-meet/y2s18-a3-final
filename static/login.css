@@ -14,10 +14,26 @@ input[type=text] {
     color: white;
 }
 body {
-    background-color: white;
+   
     color: white;
+    height: 100%
+    width:100%;
 }
-form:hover{color:green;
+
+#sidebar{
+
+	background-color:aqua;
+	width: 100%;
+	height: 100px;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+form:hover{color:white;
 font-size:25px;}
 
 

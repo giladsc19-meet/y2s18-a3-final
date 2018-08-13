@@ -4,23 +4,57 @@
         <title>My Final Project</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
     </head>
-    <p style=“color: green;”> </p>
-<h1 style=“background-color:white ; text-align:center;”></h1>
+    <p style=“color:aqua;”> </p>
+<h1 style=“background-color:white; text-align:center;”></h1>
 
 
     <body>
-        <h1>our website</h1>
+
+        <div id="sidebar">
+            <h1></h1>
+            <p></p>
+        </div>
+
+         
+         <a href="login.html">
+            <button onclick="window.location.href="login.html">login</button>
+            <button onclick="window.location.href="sign_up">sign_up</button>
+            <!-- <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand">Navbar</a>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+         </a> -->
+
+
+        <h1>welcome to our website!!!</h1>
+
+        
     </body>
 
-    <form method = "POST" action = '/'>
-        <input type="text" name="user_name" placeholder="user_name">
-        <input type="password" name="password" placeholder="password">
-    	<input type="submit" value="submit">
-    </form>
-    
+     <form action = "/add" method = "post">
+            <input type="text" name="user_name" placeholder="user_name">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" value="submit">
+        </form>
+        <div style="background-color: aqua" id="header">
 
-        <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+        </div> 
+        <div class="container" id="content">
+  <h1></h1>
+  <p></p>
+</div>
+
+
+
+
+
+        
+    
     </body>
 
 
 </html>
+
