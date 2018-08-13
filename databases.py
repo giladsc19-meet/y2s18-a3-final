@@ -22,7 +22,7 @@ def add_user(user_name, password):
         session.add(user)
         session.commit()
         return True
-#put java script for let another option of writing
+
 def delete_user_by_user_name(user_name):
     session.query(User).filter_by(user_name = user_name).delete().first()
     session.commit()
@@ -37,7 +37,7 @@ def check_user(user_name,password):
     if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
         return True
     else:
-        return False
+        return False        
 ###reaching users
 def get_all_users():
     users = session.query(User).all()

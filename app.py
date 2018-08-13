@@ -2,7 +2,6 @@ from databases import *
 from flask import Flask, render_template, url_for,request,redirect
 app = Flask(__name__)
 
-<<<<<<< HEAD
 @app.route('/', methods=['GET', 'POST'])
 def add_student_route():
 	if request.method == 'GET':
