@@ -15,26 +15,34 @@ input[type=text] {
 }
 body {
    
-    color: white;
-    height: 100%
+    background-color: #6bf8fc;
+    height: 100%;
     width:100%;
 }
 
-#sidebar{
 
-	background-color:aqua;
-	width: 100%;
-	height: 100px;
-
-}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-form:hover{color:white;
-font-size:25px;}
 
+#sidenav {
+    height: 100%; 
+    width: 160px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+}
+.container{
+	background-color:white;
+	height: 100%;
+	position:absolute;
+}
 
 /* Put your styles BELOW this line */
