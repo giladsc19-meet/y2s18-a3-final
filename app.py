@@ -62,6 +62,10 @@ def home():
 def display_user(user_name):
     return render_template('profile.html', user=get_by_user_name(user_name))
 
+@app.route('/profile')
+def display_users():
+    return render_template('profile.html')
+
 
 
 
