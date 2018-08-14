@@ -7,6 +7,7 @@ a:hover{ font-size:20px; color:white;}
 .topnav {
     overflow: hidden;
     background-color: gray;
+    text-align: center;
     color:white;
 }
 .topnav a {
