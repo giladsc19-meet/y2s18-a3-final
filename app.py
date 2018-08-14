@@ -17,7 +17,7 @@ def login():
 			print(user)
 			session['user_id'] = user.id
 			print(session['user_id'])
-			return redirect(url_for('home'), feed = get_posts())
+			return redirect(url_for('home',feed = get_posts()))
 		
 		else:
 			x = "wrong password or user_name"
@@ -59,9 +59,9 @@ def home():
  
  #this is for the profile page
 
-@app.route('/user/<string:user_name>')
-def display_user(user_name):
-    return render_template('profile.html', user=get_by_user_name(user_name))
+@app.route('/user')
+def display_user():
+    return render_template('profile.html', user=get_user_by_id(session['user_id']))
 
 @app.route('/profile')
 def display_users():

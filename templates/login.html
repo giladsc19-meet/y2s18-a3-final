@@ -23,19 +23,20 @@
        <a href="{{ url_for('add_student_route')}}">
         <button onclick="window.location" href="{{ url_for('add_student_route')}}" class="btn btn-outline-danger">sign_up</button>
         </a>
-
-    </div>
-
-
-     <form method = "post" action="/">
+        <div class="main" style="background-color: white" >
+        <form method = "post" action="/">
             <input type="text" name="user_name" placeholder="user_name">
             <input type="password" name="password" placeholder="password">
             <input type="submit" value="submit" class="btn btn-outline-danger">
 
-        </form>
-        <div class="main">
-          
+        </form>          
         </div>
+
+    </div>
+
+
+     
+       
         
     </div>
     <script src="{{ url_for('static', filename='jquery.js') }}"></script>

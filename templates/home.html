@@ -23,13 +23,12 @@
 			<!-- <center> -->
 
 		<ul class="topnav" id="background">	
-		<li><a href="/login/">sign out</a></li>
-		<li><a href="{{dis}}">contact us</a></li>
-		<li><a href="{{dis}}">who we are?</a></li>
-		<li><a href="{{dis}}">help</a></li>
-		<li><a href="{{dis}}">home page</a></li>
-		
-		<li><a href="/display_user/">profile page</a></li>
+			<li><a href="{{url_for('home')}}">home page</a></li>
+			<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
+			<li><a href="{{dis}}">who we are?</a></li>
+			<li><a href="{{dis}}">contact us</a></li>
+			<li><a href="{{dis}}">help</a></li>
+		<li><a href="{{url_for('login')}}">sign out</a></li>
 		</ul>
 			<!-- </center> -->
 			<center>
