@@ -63,12 +63,17 @@ def get_by_user_name(user_name):
     session = session_factory()
     user = session.query(User).filter_by(user_name=user_name).first()
     return user
+    
 
+def get_user_by_id(user_id):
+    session = session_factory()
+    user = session.query(User).filter_by(user_id=user_id).first()
+    return user 
 ########################################################################################################
 
-def make_post(user_id, text, image_url):
+def make_post(user_name, text, image_url):
     session = session_factory()
-    post = Post(user_id = user_id,text = text, image_url = image_url)
+    post = Post(user_name = user_name,text = text, image_url = image_url, claps_num = 0)
     session.add(post)
     session.commit()
     return post
