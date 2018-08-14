@@ -1,29 +1,37 @@
 from model import Base, Column, User, Post
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, scoped_session
 engine = create_engine('sqlite:///project.db')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
-session = DBSession()
+session_factory = scoped_session(DBSession)
 
 ###add & delete
 # 1) add a user to the database ! (PES: gets called in the SIGN UP)
-def add_user(user_name, password):
+def add_user(first_name,last_name,birthdate,user_name,password):
+    session = session_factory()
     print("Add a User!")
     if check_user_name_available(user_name)==True:
         print ("cant use")
         return False
     else:
-        user = User(user_name = user_name, password = password)
+        user = User(first_name=first_name, last_name=last_name, birthdate=birthdate, user_name=user_name, password=password)
         session.add(user)
         session.commit()
-        return True
+    return True
+
+def delete_all():
+    session = session_factory()
+    session.query(User).delete().all()
+    session.commit()
 
 def delete_user_by_user_name(user_name):
+    session = session_factory()
     session.query(User).filter_by(user_name = user_name).delete().first()
     session.commit()
 
 def check_user_name_available(user_name):
+    session = session_factory()
     if session.query(User).filter_by(user_name=user_name).first()!=None:
         return True
     else:
@@ -32,6 +40,7 @@ def check_user_name_available(user_name):
 # 2) check if a user exists in the database ! (PES: gets called in the LOG IN)
 
 def check_user(user_name, password):
+    session = session_factory()    
     if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
         return True
     else:
@@ -41,6 +50,7 @@ def check_user(user_name, password):
 # 3) get all the users from the database ! (PES: gets passed to login.html to check if the user exists in the database when logging in)
 
 def get_all_users():
+    session = session_factory()
     users = session.query(User).all()
     return users
 
@@ -49,12 +59,14 @@ def get_all_users():
 
 
 def get_by_user_name(user_name):
+    session = session_factory()
     user = session.query(User).filter_by(user_name=user_name).first()
     return user
 
 ########################################################################################################
 
 def make_post(user_id, text, image_url):
+    session = session_factory()
     post = Post(user_id = user_id,text = text, image_url = image_url)
     session.add(post)
     session.commit()
@@ -63,6 +75,7 @@ def make_post(user_id, text, image_url):
 
 
 def get_posts():
+    session = session_factory()
     posts = session.query(Post).all()
     print("get posts")
     return posts
@@ -73,6 +86,4 @@ def get_posts():
 def edit_image(user_name):
     pass
 	
-
-
-
+# get_posts()

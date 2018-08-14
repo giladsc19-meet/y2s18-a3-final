@@ -1,3 +1,41 @@
+blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);   
+}
+
+.quote-box{
+    
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #4ADFCC;
+    margin-top: 25px;
+    color:white;
+    width: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    
+}
+
+.quotation-mark{
+    
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
+.quote-text{
+    
+    font-size: 19px;
+    margin-top: -65px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -19,6 +57,7 @@
     margin-left: 50px;
     position: fixed;
     /* width: 400px; */
+    left: 200px;
   }
 
 .content{
@@ -27,21 +66,21 @@
 
 .btn-outline-primary{
 
-    color: aqua;
+    color: #4ADFCC;
     background-color: white;
-    border-color: aqua;
+    border-color: #4ADFCC;
 }
 
 .btn-outline-primary:hover{
 
     color: white;
-    background-color: aqua;
-    border-color: aqua;
+    background-color: #4ADFCC;
+    border-color: #4ADFCC;
 }
-
+/* 
 div .card{
     /* height: 100%; */
-}
+} */
 
 div .posts{
 
@@ -108,7 +147,7 @@ body{
 #sidebar{
 
     background-color: aqua;
-    height: 75px;
+    height: 125px;
     width: 100%;
 }
 .space{
