@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,29 +24,28 @@
 
 				<center><h1>information about us:</h1></center>
 
-<<<<<<< HEAD
-		<ul class="topnav" id="background">	
-			<li><a href="{{url_for('home')}}">home page</a></li>
-			<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
-			<li><a href="{{url_for('about')}}">who we are?</a></li>
-			<li><a href="{{dis}}">contact us</a></li>
-			<li><a href="{{dis}}">help</a></li>
-		<li><a href="{{url_for('login')}}">sign out</a></li>
-		</ul>
-			<!-- </center> -->
-			<center>
-			<div class="column" >posts:</div><br>
-			<form action="/home" method="post">
-			<input type="text" name="image_url" placeholder="post your image">
-            <input type="text" name="text" placeholder="write your post">
-			<input type="submit" value="submit">
-			</form>
-		</center>
+			<ul class="topnav" id="background">	
+				<li><a href="{{url_for('home')}}">home page</a></li>
+				<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
+				<li><a href="{{url_for('about')}}">who we are?</a></li>
+				<li><a href="{{dis}}">contact us</a></li>
+				<li><a href="{{dis}}">help</a></li>
+			<li><a href="{{url_for('login')}}">sign out</a></li>
+			</ul>
 
-			</div>
-		</div>
-	</div>
+				<center>
+				<div class="column" >posts:</div><br>
+				<form action="/home" method="post">
+				<input type="text" name="image_url" placeholder="post your image">
+        	    <input type="text" name="text" placeholder="write your post">
+				<input type="submit" value="submit">
+				</form>
+			</center>
+		
 		<center>
+
+		{% for post in feed %}
+
         	<blockquote class="quote-box">
             	<p class="quotation-mark">
             	“
