@@ -46,11 +46,12 @@
 			</div>
 		</div>
 	</div>
-	
+
+		<div style = "margin:250px;"></div>
 	
 		<center>
 
-		{% for post in feed %}
+		{% for post in feed | reverse: %}
 
         	<blockquote class="quote-box">
             	<p class="quotation-mark">
@@ -71,8 +72,9 @@
             	</div>
             
 			</blockquote>
-		</center>           
-		{% endfor %} 	
+
+			{% endfor %} 
+		</center>           	
 	</div>
 	</div>
 	
