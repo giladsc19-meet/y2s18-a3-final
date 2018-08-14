@@ -49,22 +49,29 @@ a:hover{ font-size:20px; color:white;}
     text-align: center;
     color:white;
 }
-.nav{
-    border:1px solid #ccc;
-    border-width:1px 0;
-    list-style:none;
-    margin:0;
-    puladding:0;
-    text-align:center;
-}
+
+
 .topnav a {
     float: left;
     display: inline;
     color: white;
     text-align: center;
     padding: 14px 16px;
+
     text-decoration: none;
 }
+
+
+.topnav a:hover {
+    float: left;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size:20px;
+    text-decoration: none;
+}
+
 .container {
 	position: relative;
 	
