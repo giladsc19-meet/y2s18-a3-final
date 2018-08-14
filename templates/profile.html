@@ -32,69 +32,40 @@
 
                     
                     <div class="col-md-6 posts">
-                            {% for post in user_posts %}
+                      
 		
                             <div class="post_list">
+                              
+
+                                {% for post in user_posts %}
+
                                 <blockquote class="quote-box">
-                                    <p class="quotation-mark"></p>
-                                    <p class="quote-text">
-                                        Don't believe anything that you read on the internet, it may be fake. 
-                                    </p>
-                                    <hr>
-                                    <div class="blog-post-actions">
-                                        <p class="blog-post-bottom pull-left">
-                                            Abraham Lincoln
-                                        </p>
-                                        <p class="blog-post-bottom pull-right">
-                                            <span class="badge quote-badge">896</span>  ❤
-                                        </p>
-                                    </div>
-                                </blockquote>
+                                                                        <p class="quotation-mark">
+                                                                          “
+                                                                        </p>
+                                                                        <p class="quote-text">
+                                                                          {{post.text}}
+                                                                        </p>
+                                                                        <hr>
+                                                                        <div class="blog-post-actions">
+                                                                          <p class="blog-post-bottom pull-left">
+                                                                            {{post.user_name}}
+                                                                          </p>
+                                                                          <p id="clap" class="blog-post-bottom pull-right">
+                                                                            <span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
+                                                                            <p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+                                                                          </p>
+                                                                        </div>
+                            
+                                </blockquote> 
+                            
+                            {% endfor %} 
                                 
                             </div>
-                    
-                        {% endfor %}
-                        <div class="content">
-                            <blockquote class="quote-box">
-                                <p class="quotation-mark">
-                                  “
-                                </p>
-                                <p class="quote-text">
-                                  Don't believe anything that you read on the internet, it may be fake. 
-                                </p>
-                                <hr>
-                                <div class="blog-post-actions">
-                                  <p class="blog-post-bottom pull-left">
-                                    Abraham Lincoln
-                                  </p>
-                                  <p class="blog-post-bottom pull-right">
-                                    <span class="badge quote-badge">896</span>  ❤
-                                  </p>
-                                </div>
-                              </blockquote>
 
-                              
-                              <blockquote class="quote-box">
-                                <p class="quotation-mark">
-                                  “
-                                </p>
-                                <p class="quote-text">
-                                  Don't believe anything that you read on the internet, it may be fake. 
-                                </p>
-                                <hr>
-                                <div class="blog-post-actions">
-                                  <p class="blog-post-bottom pull-left">
-                                    Abraham Lincoln
-                                  </p>
-                                  <p class="blog-post-bottom pull-right">
-                                    <span class="badge quote-badge">896</span>  ❤
-                                  </p>
-                                </div>
-                              </blockquote>
-                        </div>
                     </div>
-                </div>
-        </div>
+                    
+                      
 
         <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
     </body>

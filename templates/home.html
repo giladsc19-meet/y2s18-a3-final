@@ -3,25 +3,27 @@
 <head>
 	<title>Project Example</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 
 	<div class="container">
-		<div>
-			
-		</div>
+		
 		<div class="sidebar"><center> logo:</center></div>
 		<div class="content">
 			<!-- <center> -->
 
 
 
-			<center><h1>information about us:</h1></center>
-			<!-- <div class="center">  -->
-			<!-- <center> -->
+				<center><h1>information about us:</h1></center>
 
+<<<<<<< HEAD
 		<ul class="topnav" id="background">	
 			<li><a href="{{url_for('home')}}">home page</a></li>
 			<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
@@ -43,13 +45,32 @@
 			</div>
 		</div>
 	</div>
-	{% for post in feed %}
-		
-	<div class="post_list">
-		<img src="{{post.image_url}}" alt="{{post.name}}" height="42" width="42">
+		<center>
+        	<blockquote class="quote-box">
+            	<p class="quotation-mark">
+            	“
+            	</p>
+            	<p class="quote-text">
+            		{{post.text}}
+            	</p>
+            	<hr/>
+            	<div class="blog-post-actions">
+            		<p class="blog-post-bottom pull-left">
+            		{{post.user_name}}
+            		</p>
+            		<p id="clap" class="blog-post-bottom pull-right">
+            		<span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
+            		<p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+            		</p>
+            	</div>
+            
+            </blockquote> 
+            
+		{% endfor %} 
+	</center>
 	</div>
-
-	{% endfor %}
+	</div>
+	
 </body>
 
 </html>

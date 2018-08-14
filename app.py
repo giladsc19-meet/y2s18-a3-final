@@ -48,7 +48,7 @@ def home():
 		print("home is where you are")
 		return render_template('home.html', feed=feed)
 	else:
-		content = request.form.get('content', False)
+		content = request.form.get('text', False)
 		image_url = request.form.get('image_url', False)
 		print(image_url)
 		print(content)

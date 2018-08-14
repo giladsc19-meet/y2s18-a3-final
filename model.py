@@ -25,7 +25,8 @@ class User(Base):
 class Post(Base):
     __tablename__= "posts"
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer)
+    user_name = Column(String)
     text = Column(String)
     image_url = Column(String)
+    claps_num = Column(Integer)
     # badge = Column(String)
