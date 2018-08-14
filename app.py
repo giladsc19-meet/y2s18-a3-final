@@ -58,10 +58,12 @@ def home():
 
  #this is for the profile page
 
-@app.route('/user')
+@app.route('/<string:user_name>')
 def display_user():
+
 	user=get_user_by_id(session['user_id'])
 	return render_template('profile.html', user=user)
+
 
 @app.route('/about')
 def about():
