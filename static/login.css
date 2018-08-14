@@ -27,6 +27,11 @@ ul {
     padding: 0;
 }
 
+btn btn-outline-danger: active{
+
+	background-color: #dc3545;
+}
+
 
 #sidenav {
     height: 100%; 
@@ -39,10 +44,11 @@ ul {
     overflow-x: hidden; 
     padding-top: 20px;
 }
-.container{
+.main{
 	background-color:white;
 	height: 100%;
 	position:absolute;
 }
+
 
 /* Put your styles BELOW this line */

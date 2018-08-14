@@ -1,8 +1,8 @@
 a:hover{ font-size:20px; color:white;}
 #background{background-color: gray}
 .column{
-	float: left;
-	width: 33.33%;
+	/*float: left;*/
+	/*width: 33.33%;*/
 }
 .topnav {
     overflow: hidden;
@@ -10,9 +10,17 @@ a:hover{ font-size:20px; color:white;}
     text-align: center;
     color:white;
 }
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    puladding:0;
+    text-align:center;
+}
 .topnav a {
     float: left;
-    display: block;
+    display: inline;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -20,21 +28,29 @@ a:hover{ font-size:20px; color:white;}
 }
 .container {
 	position: relative;
+	
 }
 input {
 	top: 100px;
-	left: 500px;
+	left: 600px;
+
 }
 .column{
+	/*top: 15px;*/
+	/*left: 600px;*/
+}
+.column1{
 	top: 15px;
-	left: 600px;
+	left: 500px;
+	background-color: aqua; 
 }
 .sidebar {
 	position: absolute;
-	top: 15px;
-	left: 500px;
+	/*top: 15px;*/
+	/*left: 500px;*/
 	color:aqua;
 	font-size: 25px;
+	width: 100%;
 	background-color: white;
 }
 .content {
@@ -45,4 +61,8 @@ input {
 }
 .post_list{
 	position: relative;
+}
+
+ li {
+	display: inline
 }
