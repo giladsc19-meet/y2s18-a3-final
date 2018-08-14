@@ -17,10 +17,8 @@ def login():
 			print(user)
 			session['user_id'] = user.id
 			print(session['user_id'])
-
 			return redirect(url_for('home'), feed = get_posts())
-
-			return redirect(url_for('/home'))
+		
 		else:
 			x = "wrong password or user_name"
 			return render_template('login.html', message=x)
@@ -68,9 +66,6 @@ def display_user(user_name):
 @app.route('/profile')
 def display_users():
     return render_template('profile.html')
-
-
-
 
 
 if __name__ == "__main__":

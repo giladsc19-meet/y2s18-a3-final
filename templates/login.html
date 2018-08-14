@@ -16,12 +16,15 @@
 
 
     <div style="background-color: aqua" id="header">
-       <a href="login.html">
-           <button onclick="window.location" href="login.html" class="btn btn-outline-danger" >login</button>
-           <button onclick="window.location" href="sign_up" class="btn btn-outline-danger">sign_up</button>
-       </a>
-    </div>
+       
+       <a href="{{ url_for('login')}}">
+           <button onclick="window.location" href="{{ url_for('login')}}" class="btn btn-outline-danger">login</button>
+        </a>
+       <a href="{{ url_for('add_student_route')}}">
+        <button onclick="window.location" href="{{ url_for('add_student_route')}}" class="btn btn-outline-danger">sign_up</button>
+        </a>
 
+    </div>
 
 
      <form method = "post" action="/">
