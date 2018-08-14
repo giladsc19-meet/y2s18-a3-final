@@ -85,9 +85,11 @@ def get_posts():
     print("get posts")
     return posts
 
-# 6) edit the image of the user
+def get_user_posts_by_id(id):
+    session = session_factory()
+    user_posts=session.query(Post).filter_by()
+    # 6) edit the image of the user
 
 
 def edit_image(user_name):
     pass
-	

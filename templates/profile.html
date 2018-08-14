@@ -32,13 +32,12 @@
 
                     
                     <div class="col-md-6 posts">
-                            {% for post in user_posts %}
-		
+                            {% for post in user.user_posts %}    
                             <div class="post_list">
                                 <blockquote class="quote-box">
                                     <p class="quotation-mark"></p>
                                     <p class="quote-text">
-                                        Don't believe anything that you read on the internet, it may be fake. 
+                                        {{post.text}} 
                                     </p>
                                     <hr>
                                     <div class="blog-post-actions">
