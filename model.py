@@ -30,25 +30,3 @@ class Post(Base):
     image_url = Column(String)
     claps_num = Column(Integer)
     # badge = Column(String)
-
-
-# <!-- {% for post in user_posts %} -->
-
-#   <!-- {% endfor %} -->
-
-#       <!-- <blockquote class="quote-box">
-#                                     <p class="quotation-mark"></p>
-#                                     <p class="quote-text">
-#                                         {{post.text}}} 
-#                                     </p>
-#                                     <hr>
-#                                     <div class="blog-post-actions">
-#                                         <p class="blog-post-bottom pull-left">
-#                                             {{post.user_name}}
-#                                         </p>
-#                                         <p class="blog-post-bottom pull-right">
-#                                             <span class="badge quote-badge">{{post.claps_num}}</span>
-#                                             <p><button type="button" class="btn btn-outline-primary">Clap</button></p> 
-#                                         </p>
-#                                     </div>
-#                                 </blockquote> -->
