@@ -7,32 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 
 </head>
 <body>
-    <div style="background-color: aqua" id="header">
-       <a href="login.html">
-           <button onclick="window.location" href="login.html" class="btn btn-outline-danger">login</button>
-           <button onclick="window.location" href="sign_up" class="btn btn-outline-danger">sign_up</button>
-       </a>
-    </div>
+    <script type="text/javascript">
+      .form-overlay
+      #form-container.icon.fa.fa-pencil
+      %span#form-close.icon.fa.fa-close
+      #form-content
+      #form-head
+      %h1.pre Get in touch
+      %p.pre Good choice...
+      %h1.post Thanks!
+      %p.post Ill be in touch ASAP
+      %form
+      %input.input.name{:type => "text", :name => "user_name", :placeholder => "Your name please"}
+      %input.input.email{:type => "text", :name => "user_email", :placeholder => "A contact email"}
+      %select.input.select{:name => "subject"}
+      %option{:disabled => ""} What shall we talk about?
+      %option{:selected => ""} About a new project
+      %option About a job opportunity
+      %option Lets do this over a coffee
+      %textarea.input.message{:placeholder => "How can I help?"}
+      %input.input.submit{:type => "submit", :value => "Send Message"}
+  </script>
+
+  <div style="background-color: aqua" id="header">
+     <a href="login.html">
+         <button onclick="window.location" href="login.html" class="btn btn-outline-danger" >login</button>
+         <button onclick="window.location" href="sign_up" class="btn btn-outline-danger">sign_up</button>
+     </a>
+ </div>
 
 
 
-     <form method = "post" action="/">
-            <input type="text" name="user_name" placeholder="user_name">
-            <input type="password" name="password" placeholder="password">
-            <input type="submit" value="submit" class="btn btn-outline-danger">
-        </form>
-        <div class="main">
-          
-        </div>
-    </div>
-    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
+ <form method = "post" action="/">
+    <input type="text" name="user_name" placeholder="user_name">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="submit" class="btn btn-outline-danger">
+
+</form>
+<div class="main">
+  
+</div>
+</div>
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.js') }}"></script>
 
 </body>
 </html>
