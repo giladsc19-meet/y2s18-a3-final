@@ -86,4 +86,4 @@ def get_posts():
 def edit_image(user_name):
     pass
 	
-get_posts()
+# get_posts()
