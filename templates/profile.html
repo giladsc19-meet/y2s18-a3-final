@@ -1,3 +1,5 @@
+<!-- This html page takes user_posts as an argument -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,8 +31,29 @@
                     </div>
 
                     
-                    
                     <div class="col-md-6 posts">
+                            {% for post in user_posts %}
+		
+                            <div class="post_list">
+                                <blockquote class="quote-box">
+                                    <p class="quotation-mark"></p>
+                                    <p class="quote-text">
+                                        Don't believe anything that you read on the internet, it may be fake. 
+                                    </p>
+                                    <hr>
+                                    <div class="blog-post-actions">
+                                        <p class="blog-post-bottom pull-left">
+                                            Abraham Lincoln
+                                        </p>
+                                        <p class="blog-post-bottom pull-right">
+                                            <span class="badge quote-badge">896</span>  ❤
+                                        </p>
+                                    </div>
+                                </blockquote>
+                                
+                            </div>
+                    
+                        {% endfor %}
                         <div class="content">
                             <blockquote class="quote-box">
                                 <p class="quotation-mark">
@@ -50,23 +73,7 @@
                                 </div>
                               </blockquote>
 
-                              <blockquote class="quote-box">
-                                <p class="quotation-mark">
-                                  “
-                                </p>
-                                <p class="quote-text">
-                                  Don't believe anything that you read on the internet, it may be fake. 
-                                </p>
-                                <hr>
-                                <div class="blog-post-actions">
-                                  <p class="blog-post-bottom pull-left">
-                                    Abraham Lincoln
-                                  </p>
-                                  <p class="blog-post-bottom pull-right">
-                                    <span class="badge quote-badge">896</span>  ❤
-                                  </p>
-                                </div>
-                              </blockquote>
+                              
                               <blockquote class="quote-box">
                                 <p class="quotation-mark">
                                   “
