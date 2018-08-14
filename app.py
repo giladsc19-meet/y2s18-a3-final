@@ -27,9 +27,12 @@ def add_student_route():
 	if request.method == 'GET':
 		return render_template('sign_up.html')
 	else:
+		first_name= request.form['first_name']
+		last_name= request.form['last_name']
+		birthdate= request.form['birthdate']
 		user_name= request.form['user_name']
 		password= request.form['password']
-		status = add_user(user_name,password)
+		status = add_user(first_name,last_name,birthdate,user_name,password)
 		
 		if status:
 			return redirect(url_for('login'))
