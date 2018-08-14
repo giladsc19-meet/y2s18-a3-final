@@ -3,6 +3,7 @@
     padding:16px 32px;
     margin: 4px 2px;
 
+
 }
 }
 input[type=text] {
@@ -12,12 +13,14 @@ input[type=text] {
     box-sizing: border-box;
     background-color:aqua;
     color: white;
+
 }
 body {
    
     background-color: #6bf8fc;
     height: 100%;
     width:100%;
+
 }
 
 
@@ -25,12 +28,10 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
 }
 
-btn btn-outline-danger: active{
 
-	background-color: #dc3545;
-}
 
 
 #sidenav {
@@ -43,11 +44,26 @@ btn btn-outline-danger: active{
     background-color: #111; 
     overflow-x: hidden; 
     padding-top: 20px;
+
 }
 .main{
 	background-color:white;
 	height: 100%;
 	position:absolute;
+    width: 60%;
+    left:20%;
+
+}
+#header{
+    position:relative;
+    width: 60%;
+    left:20%;
+
+}
+#logo{
+   position:relative;
+    left:50%;
+    transform: translateX(-50%);
 }
 
 

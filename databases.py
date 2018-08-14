@@ -71,9 +71,9 @@ def get_user_by_id(user_id):
     return user 
 ########################################################################################################
 
-def make_post(user_name, text, image_url):
+def make_post(user_id, text, image_url):
     session = session_factory()
-    post = Post(user_name = user_name,text = text, image_url = image_url, claps_num = 0)
+    post = Post(user_id = user_id,text = text, image_url = image_url, claps_num = 0)
     session.add(post)
     session.commit()
     return post
@@ -86,9 +86,11 @@ def get_posts():
     print("get posts")
     return posts
 
-# 6) edit the image of the user
+def get_user_posts_by_id(id):
+    session = session_factory()
+    user_posts=session.query(Post).filter_by()
+    # 6) edit the image of the user
 
 
 def edit_image(user_name):
     pass
-	

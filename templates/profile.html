@@ -32,41 +32,25 @@
 
                     
                     <div class="col-md-6 posts">
-                      
-		
+
+                            {% for post in user.user_posts %}    
+
                             <div class="post_list">
                               
-
-                                {% for post in user_posts %}
-
                                 <blockquote class="quote-box">
-                                                                        <p class="quotation-mark">
-                                                                          “
-                                                                        </p>
-                                                                        <p class="quote-text">
-                                                                          {{post.text}}
-                                                                        </p>
-                                                                        <hr>
-                                                                        <div class="blog-post-actions">
-                                                                          <p class="blog-post-bottom pull-left">
-                                                                            {{post.user_name}}
-                                                                          </p>
-                                                                          <p id="clap" class="blog-post-bottom pull-right">
-                                                                            <span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
-                                                                            <p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
-                                                                          </p>
-                                                                        </div>
-                            
+                                    <p class="quotation-mark"></p>
+                                    <p class="quote-text">{{post.text}}</p>
+                                    <hr>
+                                    <div class="blog-post-actions">
+                                    <p class="blog-post-bottom pull-left">{{post.user_name}}</p>
+                                    <p id="clap" class="blog-post-bottom pull-right">
+                                        <span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span></p>
+                                    <p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+                                    </div>
                                 </blockquote> 
-                            
-                            {% endfor %} 
-                                
+                            {% endfor %}      
                             </div>
-
                     </div>
-                    
-                      
-
         <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
     </body>
 </html>
