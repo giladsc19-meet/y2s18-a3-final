@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>CSS Example</title>
-
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
 </head>
 
@@ -15,10 +13,8 @@
 			<center>
 
 			<form action="/home" method="post">
-			
-        
-            <section id = "post_info">
 
+<<<<<<< HEAD
 			<h1>information about us:</h1>
 			<center>
 				<li class="topnav" id="background">
@@ -30,6 +26,7 @@
 				<a href="{{display_user}}">profile page</a>
 				</li>
 			</center>
+			<form>
 			<div class="column" >posts:</div><br>
 			<input type="text" name="image_url" placeholder="post your image">
             <input type="text" name="text" placeholder="write your post">
@@ -40,8 +37,9 @@
 		</div>
 	</div>
 	{% for post in feed %}
+		
 	<div class="post_list">
-		<img src="{{post.path}}" alt="{{post.name}}" height="42" width="42">
+		<img src="{{post.image_url}}" alt="{{post.name}}" height="42" width="42">
 	</div>
 
 	{% endfor %}

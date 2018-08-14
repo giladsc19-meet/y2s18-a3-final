@@ -14,7 +14,9 @@ def login():
 		password= request.form['password']
 		if check_user(user_name, password)==True:
 			user = get_by_user_name(user_name)
+			print(user)
 			session['user_id'] = user.id
+			print(session['user_id'])
 			return redirect(url_for('home'))
 		else:
 			x = "wrong password or user_name"
@@ -43,10 +45,14 @@ def home():
 		print("home is where you are")
 		return render_template('home.html', feed=feed)
 	else:
-		text = request.form['text']
-		image_url = request.form['image_url']
-		post = make_post(session['user_id'], text, image_url)
-		return render_template('home.html', post = post )
+		content = request.form.get('content', False)
+		image_url = request.form.get('image_url', False)
+		print(image_url)
+		print(content)
+		print(session.get('user_id'))
+		post = make_post(session.get('user_id'), content, image_url)
+		feed = get_posts()
+		return render_template('home.html', feed = feed )
  
  #this is for the profile page
 
@@ -55,11 +61,6 @@ def display_user(user_name):
     return render_template('home.html', user=get_by_user_name(user_name))
 
 
-
-
-@app.route('/yyy')
-def dis():
-	return render_template('home.html')
 
 
 if __name__ == "__main__":
