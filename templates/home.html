@@ -9,26 +9,29 @@
 
 
 	<div class="container">
-		<div class="sidebar"> logo:</div>
+		<div>
+			
+		</div>
+		<div class="sidebar"><center> logo:</center></div>
 		<div class="content">
 			<!-- <center> -->
 
 
 
-			<h1>information about us:</h1>
-			<div class="center"> 
+			<center><h1>information about us:</h1></center>
+			<!-- <div class="center">  -->
 			<!-- <center> -->
+
 		<ul class="topnav" id="background">	
 		<li><a href="{{dis}}">contact us</a></li>
-		<li><a href="{{dis}}">who we are</a></li>
+		<li><a href="{{dis}}">who we are?</a></li>
 		<li><a href="{{dis}}">help</a></li>
 		<li><a href="{{dis}}">home page</a></li>
 		<li><a href="{{dis}}">sign out</a></li>
 		<li><a href="/display_user/">profile page</a></li>
-	</ul>
+		</ul>
 			<!-- </center> -->
-			</div>
-			
+			<center>
 			<div class="column" >posts:</div><br>
 			<form action="/home" method="post">
 			<input type="text" name="image_url" placeholder="post your image">
@@ -37,6 +40,7 @@
 			</form>
 		</center>
 
+			</div>
 		</div>
 	</div>
 	{% for post in feed %}
