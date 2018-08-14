@@ -17,7 +17,7 @@ def login():
 			print(user)
 			session['user_id'] = user.id
 			print(session['user_id'])
-			return redirect(url_for('home'))
+			return redirect(url_for('/home'))
 		else:
 			x = "wrong password or user_name"
 			return render_template('login.html', message=x)
@@ -27,10 +27,12 @@ def add_student_route():
 	if request.method == 'GET':
 		return render_template('sign_up.html')
 	else:
-		
+		first_name= request.form['first_name']
+		last_name= request.form['last_name']
+		birthdate= request.form['birthdate']
 		user_name= request.form['user_name']
 		password= request.form['password']
-		status = add_user(user_name,password)
+		status = add_user(first_name,last_name,birthdate,user_name,password)
 		
 		if status:
 			return redirect(url_for('login'))
@@ -59,6 +61,10 @@ def home():
 @app.route('/user/<string:user_name>')
 def display_user(user_name):
     return render_template('profile.html', user=get_by_user_name(user_name))
+
+@app.route('/profile')
+def display_users():
+    return render_template('profile.html')
 
 
 
