@@ -62,7 +62,7 @@ def get_by_user_name(user_name):
     session = session_factory()
     user = session.query(User).filter_by(user_name=user_name).first()
     return user
-
+    
 ########################################################################################################
 
 def make_post(user_id, text, image_url):

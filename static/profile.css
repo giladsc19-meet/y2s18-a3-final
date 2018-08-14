@@ -47,6 +47,21 @@ blockquote{
     height: 200px;
 }
 
+#clap_btn{
+
+    color: white;
+    background-color: #4ADFCC;
+    /* border-color: #4ADFCC; */
+}
+
+#clap_btn:hover{
+
+    color: #4ADFCC;
+    background-color: white;
+    border-color: #4ADFCC;
+}
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
