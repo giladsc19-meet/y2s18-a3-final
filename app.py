@@ -42,8 +42,7 @@ def add_student_route():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-		if request.method == 'GET':
-    	print("home 1")
+	if request.method == 'GET':
 		feed = get_posts()
 		print("home is where you are")
 		return render_template('home.html', feed=feed)
@@ -57,7 +56,6 @@ def home():
 		feed = get_posts()
 		return render_template('home.html', feed = feed )
 
- user
  #this is for the profile page
 
 @app.route('/user')

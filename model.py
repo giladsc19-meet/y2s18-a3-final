@@ -27,6 +27,7 @@ class Post(Base):
     id = Column(Integer, primary_key=True)
     text = Column(String)
     image_url = Column(String)
+    claps_num = Column(Integer)
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship("User", back_populates="user_posts")
     # badge = Column(String)
