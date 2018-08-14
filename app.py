@@ -59,9 +59,9 @@ def home():
  
  #this is for the profile page
 
-@app.route('/user/<string:user_name>')
-def display_user(user_name):
-    return render_template('profile.html', user=get_by_user_name(user_name))
+@app.route('/user')
+def display_user():
+    return render_template('profile.html', user=get_user_by_id(session['user_id']))
 
 @app.route('/profile')
 def display_users():

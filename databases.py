@@ -64,6 +64,10 @@ def get_by_user_name(user_name):
     user = session.query(User).filter_by(user_name=user_name).first()
     return user
 
+def get_user_by_id(user_id):
+    session = session_factory()
+    user = session.query(User).filter_by(user_id=user_id).first()
+    return user 
 ########################################################################################################
 
 def make_post(user_id, text, image_url):
