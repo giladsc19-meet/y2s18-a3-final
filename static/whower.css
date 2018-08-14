@@ -1,0 +1,26 @@
+h1 {
+	color:gray;
+	font-size: 30px;
+}
+p {
+	font-size: 20px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: gray;
+    text-align: center;
+    color:white;
+}
+.topnav a {
+    float: left;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.navnav{
+	
+    left: 20%;
+}

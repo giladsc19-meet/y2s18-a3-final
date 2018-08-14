@@ -63,9 +63,9 @@ def home():
 def display_user():
     return render_template('profile.html', user=get_user_by_id(session['user_id']))
 
-@app.route('/profile')
-def display_users():
-    return render_template('profile.html')
+@app.route('/about')
+def about():
+    return render_template('whower.html')
 
 
 if __name__ == "__main__":
