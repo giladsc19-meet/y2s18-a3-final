@@ -44,10 +44,11 @@ btn btn-outline-danger: active{
     overflow-x: hidden; 
     padding-top: 20px;
 }
-.container{
+.main{
 	background-color:white;
 	height: 100%;
 	position:absolute;
 }
+
 
 /* Put your styles BELOW this line */
