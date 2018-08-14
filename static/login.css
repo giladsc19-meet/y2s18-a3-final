@@ -60,6 +60,11 @@ ul {
     left:20%;
 
 }
+#logo{
+   position:relative;
+    left:50%;
+    transform: translateX(-50%);
+}
 
 
 /* Put your styles BELOW this line */
