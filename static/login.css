@@ -27,6 +27,11 @@ ul {
     padding: 0;
 }
 
+btn btn-outline-danger: active{
+
+	background-color: #dc3545;
+}
+
 
 #sidenav {
     height: 100%; 

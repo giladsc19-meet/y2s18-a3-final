@@ -22,12 +22,13 @@ def add_user(first_name,last_name,birthdate,user_name,password):
 
 def delete_all():
     session = session_factory()
-    session.query(User).delete().all()
+    session.query(User).delete()
+    session.query(Post).delete()
     session.commit()
 
 def delete_user_by_user_name(user_name):
     session = session_factory()
-    session.query(User).filter_by(user_name = user_name).delete().first()
+    session.query(User).filter_by(user_name = user_name).delete()
     session.commit()
 
 def check_user_name_available(user_name):
@@ -86,4 +87,3 @@ def get_posts():
 def edit_image(user_name):
     pass
 	
-# get_posts()
