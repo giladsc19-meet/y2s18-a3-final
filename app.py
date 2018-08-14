@@ -58,7 +58,8 @@ def home():
 
 @app.route('/user/<string:user_name>')
 def display_user(user_name):
-    return render_template('home.html', user=get_by_user_name(user_name))
+    return render_template('profile.html', user=get_by_user_name(user_name))
+
 
 
 
