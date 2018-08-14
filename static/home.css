@@ -46,38 +46,3 @@ input {
 .post_list{
 	position: relative;
 }
-
-.blockquote{
-    border-left:none
-}
-
-.quote-badge{
-    background-color: rgba(255, 81, 0, 0.788);   
-}
-.quote-box{
-    
-    overflow: hidden;
-    margin-top: -50px;
-    padding-top: -100px;
-    border-radius: 17px;
-    background-color: rgb(255, 60, 60);
-    margin-top: 25px;
-    color:white;
-    width: 325px;
-    box-shadow: 2px 2px 2px 2px #E0E0E0;
-    
-}
-.quotation-mark{
-    
-    margin-top: -10px;
-    font-weight: bold;
-    font-size:75px;
-    color:rgb(68, 0, 255);
-    font-family: "Times New Roman", Georgia, Serif;
-    
-}
-.quote-text{
-    
-    font-size: 15px;
-    margin-top: -65px;
-}

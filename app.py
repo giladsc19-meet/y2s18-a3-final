@@ -27,7 +27,6 @@ def add_student_route():
 	if request.method == 'GET':
 		return render_template('sign_up.html')
 	else:
-		
 		user_name= request.form['user_name']
 		password= request.form['password']
 		status = add_user(user_name,password)
