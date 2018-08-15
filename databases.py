@@ -43,8 +43,10 @@ def check_user_name_available(user_name):
 def check_user(user_name, password):
     session = session_factory()    
     if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
+        print("yes")
         return True
     else:
+        print("no")
         return False        
 ###reaching users
 

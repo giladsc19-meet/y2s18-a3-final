@@ -17,14 +17,14 @@ def login():
 			print(user)
 			session['user_id'] = user.id
 			print(session['user_id'])
-			return redirect(url_for('home',feed = get_posts()))
+			return render_template('home.html',feed = get_posts())
 		
 		else:
 			x = "wrong password or user_name"
 			return render_template('login.html', message=x)
 
 @app.route('/signup', methods=['GET', 'POST'])
-def add_student_route():
+def add_users():
 	if request.method == 'GET':
 		return render_template('sign_up.html')
 	else:
@@ -34,9 +34,9 @@ def add_student_route():
 		user_name= request.form['user_name']
 		password= request.form['password']
 		status = add_user(first_name,last_name,birthdate,user_name,password)
-		
+		feed = get_posts()
 		if status:
-			return redirect(url_for('login'))
+			return render_template('home.html', feed = feed)
 		else:
 			return render_template('sign_up.html')
 
