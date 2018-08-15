@@ -4,28 +4,37 @@
 
  	<title>Help</title>
  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='help.css') }}">
- 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+ 		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
 
-<h1>Questions You May Have
- 	</h1>
+
 
 
  </head>
  <body>
- 	    <div class="navnav">
+<!--  	    <div class="navnav"> -->
 
 
+	<div class="container">
+		<div class="content">
+			<center><h1>questions you may have:</h1></center>
+		<form method = "post">
         <ul class="topnav" id="background"> 
-            <li><a href="{{url_for('home')}}">home page</a></li>
-            <li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
-            <li><a href="{{url_for('about')}}">who we are?</a></li>
-            <li><a href="{{url_for('contact')}}">contact us</a></li>
-            <li><a href="{{url_for('help')}}">help</a></li>
-        <li><a href="{{url_for('login')}}">sign out</a></li>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('display_user',user_name='user_name')}}">Profile</a></li>
+            <li><a href="{{url_for('about')}}">Who We Are?</a></li>
+            <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+            <li><a href="{{url_for('help')}}">Help</a></li>
+        <li><a href="{{url_for('login')}}">Sign Out</a></li>
         </ul>
-    </div>
+        </form>
+  		</div>
+	</div>
 
- 	
+
+ 	<div class="container">
 
  		<button name="" class="btn btn-outline-secondary" type="submit">How do I create an account? 
  		</button>
@@ -42,7 +51,8 @@
  		-make sure you entered the user name correctly.
 
 
-
+</p>
+</div>
 
  		</body>
  		</html> 

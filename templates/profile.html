@@ -3,30 +3,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>YOUR_TITLE_HERE</title>
+        <title>Profile Page</title>
         <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
     </head>
 
     <body>
-<!--             <div class="navnav">
-
-
-        <ul class="topnav" id="background"> 
-            <li><a href="{{url_for('home')}}">home page</a></li>
-            <li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
-            <li><a href="{{url_for('about')}}">who we are?</a></li>
-            <li><a href="{{url_for('contact')}}">contact us</a></li>
-            <li><a href="{{url_for('help')}}">help</a></li>
-        <li><a href="{{url_for('login')}}">sign out</a></li>
-        </ul>
-    </div> -->
         
-        <div id = "sidebar"></div>
+            <!-- <div class="navnav"> -->
+
+<div class="container">
+        <div class="content">
+
+            <ul class="topnav" id="background"> 
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('display_user',user_name=session.get('user_name'))}}">Profile</a></li>
+                <li><a href="{{url_for('about')}}">Who are we?</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>    
+                <li><a href="{{url_for('help')}}">Help</a></li>
+            <li><a href="{{url_for('login')}}">Sign Out</a></li>
+            </ul>
+    </div> 
+</div>
+</div>
+        <!-- 
+        <div id = "sidebar"></div> -->
 
         <div class="container-fluid">
             
