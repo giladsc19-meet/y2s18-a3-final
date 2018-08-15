@@ -58,6 +58,15 @@ def add_post():
 	post = make_post(session.get('user_name'), content, image_url)
 	return redirect(url_for('home'))
 
+
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+	if session.get('user_id') == None:
+		return redirect(url_for('login'))
+	else:
+		feed = get_posts()
+		return render_template('home.html', feed = feed)
+
 # @app.route('/home/<string:user_name>/<string:password>', methods=['GET', 'POST'])
 # def home():
 # 	if request.method == 'GET':
