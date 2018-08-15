@@ -43,8 +43,10 @@ def check_user_name_available(user_name):
 def check_user(user_name, password):
     session = session_factory()    
     if session.query(User).filter_by(user_name=user_name,password=password).first()!=None:
+        print("yes")
         return True
     else:
+        print("no")
         return False        
 ###reaching users
 
@@ -71,9 +73,9 @@ def get_user_by_id(user_id):
     return user 
 ########################################################################################################
 
-def make_post(user_id, text, image_url):
+def make_post(user_name, text, image_url):
     session = session_factory()
-    post = Post(user_id = user_id,text = text, image_url = image_url, claps_num = 0)
+    post = Post(user_name = user_name, text = text, image_url = image_url, claps_num = 0)
     session.add(post)
     session.commit()
     return post
@@ -82,7 +84,7 @@ def make_post(user_id, text, image_url):
 
 def get_posts():
     session = session_factory()
-    posts = session.query(Post).all()
+    posts = session.query(Post)
     print("get posts")
     return posts
 

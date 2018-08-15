@@ -38,14 +38,14 @@ blockquote{
 
 
 a:hover{ font-size:20px; color:white;}
-#background{background-color: gray}
+/* #background{background-color: rgb(250, 39, 39)} */
 .column{
 	/*float: left;*/
 	/*width: 33.33%;*/
 }
 .topnav {
     overflow: hidden;
-    background-color: gray;
+    background-color: rgb(74, 223, 204);;
     text-align: center;
     color:white;
 }
