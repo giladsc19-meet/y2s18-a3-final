@@ -84,7 +84,7 @@ def make_post(user_name, text, image_url):
 
 def get_posts():
     session = session_factory()
-    posts = session.query(Post).all()
+    posts = session.query(Post)
     print("get posts")
     return posts
 
