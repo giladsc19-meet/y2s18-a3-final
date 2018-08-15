@@ -1,13 +1,10 @@
 blockquote{
     border-left:none
 }
-
 .quote-badge{
     background-color: rgba(0, 0, 0, 0.2);   
 }
-
 .quote-box{
-    
     overflow: hidden;
     margin-top: -50px;
     padding-top: -100px;
@@ -16,32 +13,19 @@ blockquote{
     margin-top: 25px;
     color:white;
     width: 325px;
-    box-shadow: 2px 2px 2px 2px #E0E0E0;
-    
+    box-shadow: 2px 2px 2px 2px #E0E0E0;   
 }
-
-.quotation-mark{
-    
+.quotation-mark{   
     margin-top: -10px;
     font-weight: bold;
     font-size:100px;
     color:white;
     font-family: "Times New Roman", Georgia, Serif;
-    
 }
-
 .quote-text{
     
     font-size: 19px;
     margin-top: -65px;
-}
-
-
-a:hover{ font-size:20px; color:white;}
-/* #background{background-color: rgb(250, 39, 39)} */
-.column{
-	/*float: left;*/
-	/*width: 33.33%;*/
 }
 .topnav {
     overflow: hidden;
@@ -49,51 +33,33 @@ a:hover{ font-size:20px; color:white;}
     text-align: center;
     color:white;
 }
-
-
 .topnav a {
     float: left;
     display: inline;
     color: white;
     text-align: center;
     padding: 14px 16px;
-
     text-decoration: none;
 }
-
-
 .topnav a:hover {
     float: left;
     display: inline;
-    color: white;
+    color: rgb(216, 32, 32);
     text-align: center;
     padding: 14px 16px;
     font-size:20px;
     text-decoration: none;
 }
-
 .container {
-	position: relative;
-	
+	position: relative;	
 }
 input {
 	top: 100px;
 	left: 600px;
 
 }
-.column{
-	/*top: 15px;*/
-	/*left: 600px;*/
-}
-.column1{
-	top: 15px;
-	left: 500px;
-	background-color: aqua; 
-}
 .sidebar {
 	position: absolute;
-	/*top: 15px;*/
-	/*left: 500px;*/
 	color:aqua;
 	font-size: 25px;
 	width: 100%;
@@ -109,6 +75,6 @@ input {
 	position: relative;
 }
 
- li {
+li {
 	display: inline
 }
