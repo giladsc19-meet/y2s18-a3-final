@@ -13,3 +13,24 @@ body {
     width:100%;
 
 }
+.topnav {
+    overflow: hidden;
+    background-color: gray;
+    text-align: center;
+    color:white;
+}
+.topnav a {
+    float: left;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.navnav{
+	position: relative;
+    width: 60%;
+    left: 20%;
+
+}
