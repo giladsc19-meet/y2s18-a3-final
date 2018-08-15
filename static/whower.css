@@ -1,28 +1,61 @@
 h1 {
-	color:gray;
-	font-size: 30px;
+	color:rgb(214, 16, 16);
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder
 }
-p {
+body{
+    background-image: url("paper.gif");
+}
+p{
 	font-size: 20px;
 }
-.topnav {
+.topnav{
     overflow: hidden;
-    background-color: gray;
+    background-color: rgb(74, 223, 204);;
     text-align: center;
     color:white;
 }
-.topnav a {
+.topnav a{
     float: left;
     display: inline;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
+}
+.topnav a:hover{
+    float: left;
+    display: inline;
+    color: rgb(216, 32, 32);
+    text-align: center;
+    padding: 14px 16px;
+    font-size:20px;
+    text-decoration: none;
+}
+.container{
+	position: relative;	
+}
+.sidebar{
+	position: absolute;
+	color:aqua;
+	font-size: 25px;
+	width: 100%;
+	background-color: white;
+}
+.content{
+	position: absolute;
+	top: 15px;
+	left: 20%;
+	width: 60%;
+}
+.post_list{
+	position: relative;
 }
 .navnav{
-	position: relative;
+    position: relative;
+    color:red;
     width: 60%;
     left: 20%;
-
+    font-style: italic
 }
