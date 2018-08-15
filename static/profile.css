@@ -36,6 +36,12 @@ blockquote{
     margin-top: -65px;
 }
 
+#image{
+
+    max-height: 200px;
+    max-width: 200px;
+}
+
 * {
     padding: 0;
     margin: 0;
