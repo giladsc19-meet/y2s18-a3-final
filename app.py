@@ -93,7 +93,7 @@ def display_user(user_name):
 	return render_template('profile.html', user=user)
 
 @app.route('/contact_us')
-def contact_us():
+def contact():
 	return render_template('contact.html')
 
 
