@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html>
-	<style>{}</style>
 <head>
 	<title>Project Example</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
@@ -23,23 +22,24 @@
 
 
 
-				<center><h1>information about us:</h1></center>
+				<center><h1>                                     </h1></center>
 		<form method = "post">
-			<ul class="topnav" id="background">	
-				<li><a href="{{url_for('home')}}">home page</a></li>
-				<li><a href="{{url_for('display_user',user_name=session.get('user_name'))}}">profile page</a></li>
-				<li><a href="{{url_for('about')}}">who we are?</a></li>
-				<li><a href="{{dis}}">contact us</a></li>	
-				<li><a href="{{dis}}">help</a></li>
-			<li><a href="{{url_for('login')}}">sign out</a></li>
-			</ul>
+			            <ul class="topnav" id="background"> 
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('display_user',user_name=session.get('user_name'))}}">Profile</a></li>
+                <li><a href="{{url_for('about')}}">Who are we?</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>    
+                <li><a href="{{url_for('help')}}">Help</a></li>
+            <li><a href="{{url_for('login')}}">Sign Out</a></li>
+            </ul>
+
 		</form>
 
 			</div>
 		</div>
 	</div>
 
-		<div style = "margin:175px;"></div>
+		<div style = "margin:75px;"></div>
 	
 		<center>
 				<form action="/add_post" method="post">

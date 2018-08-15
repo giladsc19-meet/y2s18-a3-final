@@ -2,20 +2,20 @@
 <html>
 	<title>HTML Tutorial</title>
 <link rel="stylesheet" type="text/css" href="{{	url_for('static', filename='whower.css')}}"> 
-        <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}"> -->
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}"> 
 
 <body>
-    <center><h1>profile</h1></center>
+    <center><h1>Who we are?</h1></center>
         <div class="navnav">
         <ul class="topnav" id="background"> 
-            <li><a href="{{url_for('home')}}">home page</a></li>
-            <li><a href="{{url_for('display_user',user_name=session['user_name'])}}">profile page</a></li>
-            <li><a href="{{url_for('about')}}">who we are?</a></li>
-            <li><a href="{{url_for('contact')}}">contact us</a></li>
-            <li><a href="{{url_for('help')}}">help</a></li>
-        <li><a href="{{url_for('login')}}">sign out</a></li>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('display_user',user_name=session['user_name'])}}">Profile</a></li>
+            <li><a href="{{url_for('about')}}">Who We Are?</a></li>
+            <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+            <li><a href="{{url_for('help')}}">Help</a></li>
+        <li><a href="{{url_for('login')}}">Sign Out</a></li>
         </ul>    
-        <p>Hello, we are Y2 students in a program calld MEET. The Green Clap website was created so people all over the world can help the eviroment, by completing tasks and challenges. The users can post the challenge the copleted and share how they helped. We hope that this website will introdue a new way of living, poeple help the enviroment, and enjoy it at the same time. Thank ypo for using Grenn Clap!</p>
+        <p>Hello, we are Y2 students in a program calld MEET. The Green Clap website was created so people all over the world can help the eviroment, by completing tasks and challenges. The users can post and share the challenges they copleted. We hope that this website will introduce a new way of living, poeple help the enviroment, and enjoy it at the same time. Thank you for using Green Clap!</p>
     </div>
 </body>
 </html>
