@@ -1,0 +1,39 @@
+!DOCTYPE html>
+<html>
+	<title>HTML Tutorial</title>
+<link rel="stylesheet" type="text/css" href="{{	url_for('static', filename='contact.css')}}"> 
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+
+<body>
+    <div class="navnav">
+	   <center><h1>Contact us:</h1></center>
+
+        <ul class="topnav" id="background"> 
+            <li><a href="{{url_for('home')}}">home page</a></li>
+            <li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
+            <li><a href="{{url_for('about')}}">who we are?</a></li>
+            <li><a href="{{url_for('contact_us')}}">contact us</a></li>
+            <li><a href="{{dis}}">help</a></li>
+        <li><a href="{{url_for('login')}}">sign out</a></li>
+        </ul>
+    </div>
+    
+    <div>
+
+	<p>
+     You can contact us by Gmail:
+     <div class="gmail"> greenclap.a3@gmail.com
+         </p>
+     <p>
+     Or by Phone:
+     <div class="phone"> 054-579-6257
+   </p>
+   
+
+
+        </div>
+         </div>
+          </div>
+
+</body>
+</html>
