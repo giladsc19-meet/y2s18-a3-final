@@ -1,9 +1,17 @@
 blockquote{
     border-left:none
 }
+
 .quote-badge{
     background-color: rgba(0, 0, 0, 0.2);   
 }
+
+#image{
+
+    max-height: 200px;
+    max-width: 200px;
+}
+
 .quote-box{
     overflow: hidden;
     margin-top: -50px;
