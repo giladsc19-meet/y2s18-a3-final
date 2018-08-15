@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html>
-	<style>{}</style>
+
 <head>
 	<title>Project Example</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 
-	<div class="container">	
-		<div class="sidebar"><center> logo:</center></div>
-			<div class="content">
-				<center><h1>information about us:</h1></center>
-					<form method = "post">
-						<ul class="topnav" id="background">	
-				<li><a href="{{url_for('home')}}">home page</a></li>
-				<li><a href="{{url_for('display_user',user_name=session.get('user_name'))}}">profile page</a></li>
-				<li><a href="{{url_for('about')}}">who we are?</a></li>
-				<li><a href="{{url_for('contact')}}">contact us</a></li>	
-				<li><a href="{{dis}}">help</a></li>
-			<li><a href="{{url_for('login')}}">sign out</a></li>
-			</ul>
-		</form>
-
-			</div>
+	<div class="container">
+		<div class="sidebar">
+			<center> logo:</center>
+		</div>
+		<div class="content">
+			<center>
+				<h1>information about us:</h1>
+			</center>
+				<ul class="topnav" id="background">
+					<li>
+						<a href="{{url_for('home')}}">home page</a>
+					</li>
+					<li>
+						<a href="{{url_for('display_user',user_name=session.get('user_name'))}}">profile page</a>
+					</li>
+					<li>
+						<a href="{{url_for('about')}}">who we are?</a>
+					</li>
+					<li>
+						<a href="{{url_for('contact')}}">contact us</a>
+					</li>
+					<li>
+						<a href="{{dis}}">help</a>
+					</li>
+					<li>
+						<a href="{{url_for('login')}}">sign out</a>
+					</li>
+				</ul>
 		</div>
 	</div>
+	</div>
 
-		<div style = "margin:175px;"></div>
-	
-		<center>
-				<form action="/home" method="post">
-				<input type="text" name="image_url" placeholder="post your image">
-        	    <input type="text" name="text" placeholder="write your post">
-				<input type="submit" value="submit">
-				</form>
-		</center>
-		
-		<center>
+	<div style="margin:175px;"></div>
+
+	<center>
+		<form action="/home" method="post">
+			<input type="text" name="image_url" placeholder="post your image">
+			<input type="text" name="text" placeholder="write your post">
+			<input type="submit" value="submit">
+		</form>
+	</center>
+
+	<center>
 
 		{% for post in feed | reverse: %}
 
-        	<blockquote class="quote-box">
-            	<p class="quotation-mark">
-            	“
-            	</p>
-            	<p class="quote-text">
-            		{{post.text}}
-            	</p>
-            	<hr/>
-            	<div class="blog-post-actions">
-            		<p class="blog-post-bottom pull-left">
-            		{{post.user_name}}
-            		</p>
-            		<p id="clap" class="blog-post-bottom pull-right">
-            		<span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
-            		<p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
-            		</p>
-            	</div>
-            
-			</blockquote>
+		<blockquote class="quote-box">
+			<p class="quotation-mark">
+				“
+			</p>
+			<p class="quote-text">
+				{{post.text}}
+			</p>
+			<hr/>
+			<div class="blog-post-actions">
+				<p class="blog-post-bottom pull-left">
+					{{post.user_name}}
+				</p>
+				<p id="clap" class="blog-post-bottom pull-right">
+					<span class="badge quote-badge" id="claps_num)">{{post.claps_num}}</span>
+					<p>
+						<button type="button" class="btn btn-outline-primary" id="clap_btn" onclick="clap()">Clap</button>
+					</p>
+				</p>
+			</div>
 
-			{% endfor %} 
-		</center>           	
-           
+		</blockquote>
+
+		{% endfor %}
+	</center>
+
 	</div>
 	</div>
-	
+
 </body>
 
 </html>

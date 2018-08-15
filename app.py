@@ -42,15 +42,17 @@ def add_users():
 		else:
 			return render_template('sign_up.html')
 
-@app.route('/home', methods=['GET'])
+@app.route('/home', methods=['GET', 'POST'])
 def home():
 	if session.get('user_id') == None:
 		return redirect(url_for('login'))
-
-	else:
-		feed = get_posts()
-		print("home is where you are")
-		return render_template('home.html', feed=feed)
+	else:	
+		if request.method=='GET':
+			return render_template('home.html')
+		else:
+			feed = get_posts()
+			print("home is where you are")
+			return render_template('home.html', feed=feed)
 
 
 @app.route('/add_post', methods=['POST'])
