@@ -92,6 +92,11 @@ def display_user(user_name):
 	print(user.user_posts)
 	return render_template('profile.html', user=user)
 
+@app.route('/contact_us')
+def contact_us():
+	return render_template('contact.html')
+
+
 
 @app.route('/about')
 def about():
