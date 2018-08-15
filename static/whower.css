@@ -5,7 +5,9 @@ h1 {
     font-weight: bolder
 }
 body{
-    background-image: url("paper.gif");
+    background-image: url("http://meet.mit.edu/wp-content/uploads/2016/05/home-bg-new.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 p{
 	font-size: 20px;
