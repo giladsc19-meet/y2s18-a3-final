@@ -5,11 +5,11 @@
         <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}"> -->
 
 <body>
-    <center><h1>Who We Are?</h1></center>
+    <center><h1>profile</h1></center>
         <div class="navnav">
         <ul class="topnav" id="background"> 
             <li><a href="{{url_for('home')}}">home page</a></li>
-            <li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
+            <li><a href="{{url_for('display_user',user_name=session['user_name'])}}">profile page</a></li>
             <li><a href="{{url_for('about')}}">who we are?</a></li>
             <li><a href="{{dis}}">contact us</a></li>
             <li><a href="{{dis}}">help</a></li>
