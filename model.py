@@ -18,7 +18,7 @@ class User(Base):
     bio = Column(String)
     image_url = Column(String)
     user_posts = relationship("Post", back_populates="user")
-    # badges = Column(list)
+    high_five_num = 0
 
 # this is the post object model
 
