@@ -1,0 +1,15 @@
+* {
+    /* Removes extra spacing from all elements on the page */
+    padding:16px 32px;
+    margin: 4px 2px;
+
+
+}
+
+body {
+   
+    background-color:grey;
+    height: 100%;
+    width:100%;
+
+}
