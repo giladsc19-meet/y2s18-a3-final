@@ -21,34 +21,36 @@
 			<!-- <center> -->
 
 
-			<center><h1>information about us:</h1></center>
-			<!-- <div class="center">  -->
-			<!-- <center> -->
 
-		<ul class="topnav" id="background">	
-			<li><a href="{{url_for('home')}}">home page</a></li>
-			<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
-			<li><a href="{{url_for('about')}}">who we are?</a></li>
-			<li><a href="{{dis}}">contact us</a></li>
-			<li><a href="{{dis}}">help</a></li>
+				<center><h1>information about us:</h1></center>
+
+			<ul class="topnav" id="background">	
+				<li><a href="{{url_for('home')}}">home page</a></li>
+				<li><a href="{{url_for('display_user',user_name='user_name')}}">profile page</a></li>
+				<li><a href="{{url_for('about')}}">who we are?</a></li>
+				<li><a href="{{dis}}">contact us</a></li>
+				<li><a href="{{dis}}">help</a></li>
 			<li><a href="{{url_for('login')}}">sign out</a></li>
-		</ul>
-			<!-- </center> -->
-			<center>
-			<div class="column" >posts:</div><br>
-			<form action="/home" method="post">
-			<input type="text" name="image_url" placeholder="post your image">
-            <input type="text" name="text" placeholder="write your post">
-			<input type="submit" value="submit">
-			</form>
-		</center>
+			</ul>
 
+<<<<<<< HEAD
 			</div>
 		</div>
 	</div>
 
 		<div style = "margin:250px;"></div>
 	
+=======
+				<center>
+				<div class="column" >posts:</div><br>
+				<form action="/home" method="post">
+				<input type="text" name="image_url" placeholder="post your image">
+        	    <input type="text" name="text" placeholder="write your post">
+				<input type="submit" value="submit">
+				</form>
+			</center>
+		
+>>>>>>> 874eb666701970cbf2e694728b9da8837a6144ba
 		<center>
 
 		{% for post in feed | reverse: %}
@@ -71,10 +73,17 @@
             		</p>
             	</div>
             
+<<<<<<< HEAD
 			</blockquote>
 
 			{% endfor %} 
 		</center>           	
+=======
+            </blockquote> 
+            
+		{% endfor %} 
+	</center>
+>>>>>>> 874eb666701970cbf2e694728b9da8837a6144ba
 	</div>
 	</div>
 	
