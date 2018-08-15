@@ -43,7 +43,6 @@ def add_users():
 @app.route('/home', methods=['GET', 'POST'])
 def home():
 	user_name = ""
-	
 
 	if request.method == 'GET':
 		user_name = request.form['user_name']
@@ -55,8 +54,9 @@ def home():
 		else:
 			return redirect(url_for('login'))
 	else:
-		content = request.form.get('text', False)
-		image_url = request.form.get('image_url', False)
+		content = request.form['text']
+		image_url = request.form['image_url']
+		# user_name = 
 		print(image_url)
 		print(content)
 		# print(session.get('user_id'))
