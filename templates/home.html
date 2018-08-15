@@ -67,8 +67,8 @@
             		{{post.user_name}}
             		</p>
             		<p id="clap" class="blog-post-bottom pull-right">
-            		<span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
-            		<p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+					<span class="badge quote-badge" id = "claps_num-{{post.id}}">{{post.claps_num}}</span>
+					<button onclick="clap({{post.id}})" class="btn btn-outline-primary" id = "clap_btn">Clap</button>
             		</p>
             	</div>
             
@@ -79,6 +79,15 @@
            
 	</div>
 	</div>
+
+	<script>
+		function clap(id) {
+			var url = "/{{ session.get('user_name') }}/clap/" + id;
+			$.post(url, function (data, status) {
+				$("#claps_num-" + id).html(data);
+			});
+		}
+	</script>
 	
 </body>
 

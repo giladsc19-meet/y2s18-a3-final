@@ -105,5 +105,14 @@ def about():
 def help():
 	return render_template('help.html')
 
+@app.route('/<string:user_name>/clap/<int:post_id>', methods=["POST"])
+def clap(user_name, post_id):
+	return str(add_clap(post_id, user_name))
+
+@app.route('/<string:user_name>/high_five/', methods=["POST"])
+def high_five(user_name):
+	return str(add_high_five(user_name))
+
+
 if __name__ == "__main__":
 	app.run(debug=True)

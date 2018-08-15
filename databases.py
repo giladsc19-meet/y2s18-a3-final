@@ -20,6 +20,23 @@ def add_user(first_name,last_name,birthdate,user_name,password):
         session.commit()
     return True
 
+def add_clap(post_id, user_name):
+    session = session_factory()
+    post = get_post_by_id(post_id)
+    post.claps_num += 1
+    session.commit()
+    return post.claps_num
+
+def add_high_five(user_name):
+    session = session_factory()
+    user = get_by_user_name(user_name)
+    if user.high_five_num is None:
+        user.high_five_num = 0
+    user.high_five_num += 1
+    session.commit()
+    return user.high_five_num
+
+
 def delete_all():
     session = session_factory()
     session.query(User).delete()
@@ -80,6 +97,11 @@ def make_post(user_name, text, image_url):
     session.commit()
     return post
 # 5) get the post of the other users (THE FEED) PES: gets passed to home.html
+
+def get_post_by_id(idnum):
+    session = session_factory()
+    post = session.query(Post).filter_by(id = int(idnum)).first()
+    return post
 
 
 def get_posts():

@@ -38,8 +38,8 @@
                             <p class="badge">Environment Saviour</p>
                             <p>{{user.bio}}</p>
                             <div style="margin: 25px 0;"></div>
-                            <p>{{user.high_five_num}}</p>
-                            <p><button type="button" class="btn btn-outline-primary">High Five</button></p>
+                            <p id="high_five_num">{{user.high_five_num}}</p>
+                            <p><button type="button" onclick="high_five('{{ user.user_name }}')" class="btn btn-outline-primary">High Five</button></p>
                         </div>
                     </div>
 
@@ -63,8 +63,10 @@
                                                 {{post.user_name}}
                                                 </p>
                                                 <p id="clap" class="blog-post-bottom pull-right">
-                                                <span class="badge quote-badge" id = "claps_num)">{{post.claps_num}}</span>
-                                                <p><button type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+                                                <span class="badge quote-badge" id = "claps_num-{{post.id}}">{{post.claps_num}}</span>
+                                                <form action="">
+                                                    <p><button onclick="clap({{post.id}})" type="button" class="btn btn-outline-primary" id = "clap_btn" onclick="clap()">Clap</button></p>
+                                                </form>
                                                 </p>
                                             </div>
                                         
@@ -72,6 +74,24 @@
                             {% endfor %}      
                             </div>
                     </div>
-        <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+        <!-- <script src="{{ url_for('static', filename='js/profile.js') }}"> -->
+        <script>
+            function clap(id) {
+                var url = "/{{ session.get('user_name') }}/clap/" + id;
+                $.post(url, function (data, status) {
+                    $("#claps_num-" + id).html(data);
+                });
+
+            }
+            function high_five(user_name) {
+                var url = "/{{ user.user_name }}/high_five/";
+                $.post(url, function (data, status) {
+                    $("#high_five_num").html(data);
+                });
+
+            }
+        </script>
+        
+        
     </body>
 </html>
