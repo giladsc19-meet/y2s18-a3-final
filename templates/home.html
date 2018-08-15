@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<style>{}</style>
@@ -14,16 +15,21 @@
 <body>
 
 
-	<div class="container">	
+	<div class="container">
+		
 		<div class="sidebar"><center> logo:</center></div>
-			<div class="content">
+		<div class="content">
+			<!-- <center> -->
+
+
+
 				<center><h1>information about us:</h1></center>
-					<form method = "post">
-						<ul class="topnav" id="background">	
+		<form method = "post">
+			<ul class="topnav" id="background">	
 				<li><a href="{{url_for('home')}}">home page</a></li>
 				<li><a href="{{url_for('display_user',user_name=session.get('user_name'))}}">profile page</a></li>
 				<li><a href="{{url_for('about')}}">who we are?</a></li>
-				<li><a href="{{url_for('contact')}}">contact us</a></li>	
+				<li><a href="{{dis}}">contact us</a></li>	
 				<li><a href="{{dis}}">help</a></li>
 			<li><a href="{{url_for('login')}}">sign out</a></li>
 			</ul>
