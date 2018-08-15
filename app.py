@@ -87,13 +87,12 @@ def add_post():
 
 @app.route('/<string:user_name>')
 def display_user(user_name):
-
 	user= get_by_user_name(user_name)
 	print(user.user_posts)
 	return render_template('profile.html', user=user)
 
 @app.route('/contact_us')
-def contact_us():
+def contact():
 	return render_template('contact.html')
 
 
