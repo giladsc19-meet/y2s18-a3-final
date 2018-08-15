@@ -36,7 +36,7 @@
 		<div style = "margin:175px;"></div>
 	
 		<center>
-				<form action="/home" method="post">
+				<form action="/add_post" method="post">
 				<input type="text" name="image_url" placeholder="post your image">
         	    <input type="text" name="text" placeholder="write your post">
 				<input type="submit" value="submit">
@@ -53,7 +53,8 @@
             	</p>
             	<p class="quote-text">
             		{{post.text}}
-            	</p>
+				</p>
+				<div ><img id="image" src="{{post.image_url}}"></div>
             	<hr/>
             	<div class="blog-post-actions">
             		<p class="blog-post-bottom pull-left">
